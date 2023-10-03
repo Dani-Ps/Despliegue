@@ -86,11 +86,14 @@ jsdoc src/js -d docs/jsdoc
 |   |   |-- main.js
 |   |   |-- Libro.js
 |   |   |-- Reserva.js
+|   |-- /css
+|   |   |-- style.css
 |-- /docs
 |   |-- /javadoc
 |   |   |-- index.html
 |   |-- /jsdoc
 |   |   |-- index.html
+|-- /node_modules
 |-- README.md
 |-- CHANGELOG.md
 ```
@@ -102,6 +105,7 @@ El proyecto sigue la siguiente estructura de directorios:
 - `/src` contiene el código fuente de Java y JavaScript.
 - `/docs` contiene la documentación generada.
 - `/css` contiene archivos de estilo CSS (si es aplicable).
+- `/node_modules` contiene las dependencias de Node.js (JavaScript) si las hubiera. Esta carpeta se utiliza para almacenar las bibliotecas y módulos necesarios para el proyecto JavaScript.
 
 ## Licencia
 
