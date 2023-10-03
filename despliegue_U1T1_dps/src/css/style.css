@@ -1,0 +1,70 @@
+/*-------------------------------------------------------------------
+Copyright (C) 2023-2024 <Daniel Perez Serrano>. All rights reserved.
+Version: 1.0
+Asignado a: Dani.dev
+
+[Tabla de contenidos]
+
+ 1. Valores Predeterminados
+   - Selección de elementos (body, h1, p, ul, li)
+   
+2. Estilos del Cuerpo (body)
+   - Fuente y Familia de Fuente
+   - Color de Fondo (#f0f0f0)
+   - Color del Texto (#333)
+   - Espaciado entre Líneas
+
+3. Estilos del Encabezado (header)
+   - Color de Fondo (#333)
+   - Color del Texto (#fff)
+   - Espaciado Interior
+   - Alineación del Texto
+
+4. Estilos de Encabezados de Nivel 1 (h1)
+   - Tamaño de Fuente
+   - Margen Inferior
+
+5. Estilos de la Barra de Navegación (nav)
+   - Color de Fondo (#444)
+   - Espaciado Interior
+
+6. Estilos de Enlaces en la Navegación (nav a)
+   - Color del Texto (#fff)
+   - Decoración de Subrayado
+   - Margen Derecho entre Enlaces
+
+7. Estilos del Enlace Actual en la Navegación (nav a.current)
+   - Peso de la Fuente en Negrita
+   - Color del Enlace Actual (#ff6600)
+
+8. Estilos del Contenido Principal (.main-content)
+   - Espaciado Interior
+   - Color de Fondo (#fff)
+   - Sombra Ligera
+
+9. Estilos de la Sección de Productos (.product-section)
+   - Margen Superior
+
+10. Estilos de Listas de Productos (.product-list)
+    - Eliminación de Viñetas de Lista
+
+11. Estilos de Elementos de Lista de Productos (.product-list-item)
+    - Borde
+    - Espaciado Interior
+    - Margen Inferior
+
+12. Estilos del Pie de Página (footer)
+    - Color de Fondo (#333)
+    - Color del Texto (#fff)
+    - Espaciado Interior
+    - Alineación del Texto
+
+13. Estilos para Pantallas Pequeñas (Media Query)
+    - Reducción del Tamaño de Fuente para h1
+    - Reducción del Tamaño de Fuente para .main-content
+
+    [Tipografias]
+    
+    body:   Arial, sans-serif
+
+-----------------------------------------------------------------------------------*/
