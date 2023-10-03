@@ -5,6 +5,14 @@
 > Este proyecto es una aplicación de gestión de biblioteca que permite mantener un registro de libros y reservas.
 > Está escrito en Java y JavaScript, y utiliza documentación generada para facilitar su comprensión y desarrollo.
 
+## Enlaces a la documentación generada
+
+La documentación de este proyecto ha sido generada y está disponible en los siguientes enlaces:
+
+[Documentación JavaDoc](./docs/javadoc/index.html)/
+
+[Documentación JSDoc](./docs/jsdoc/index.html)
+
 ## Instrucciones para clonar, configurar e ejecutar en local
 
 ### Clonar desde el repositorio
@@ -13,6 +21,10 @@ Puedes clonar este repositorio utilizando el siguiente comando:
 
 ``git clone https://github.com/Dani-Ps/Despliegue``
 
+## Java
+
+### **Ejecución en Java**
+>
 > Configuración en IDE
 
 1. Abre tu IDE favorito (por ejemplo, Eclipse, IntelliJ, Visual Studio Code, etc.).
@@ -20,14 +32,6 @@ Puedes clonar este repositorio utilizando el siguiente comando:
 3. Ejecución en local
 4. Abre el proyecto en tu IDE.
 5. Ejecuta el archivo Main.java para iniciar la aplicación.
-
-### Enlaces a la documentación generada
-
-La documentación de este proyecto ha sido generada y está disponible en los siguientes enlaces:
-
-[Documentación JavaDoc](./docs/javadoc/index.html)/
-
-[Documentación JSDoc](./docs/jsdoc/index.html)
 
 ### Ejecución en Java
 
@@ -71,6 +75,7 @@ javadoc -d ./docs/javadoc -sourcepath ./src/ -subpackages filejava
  > >Sustituye `src/js` con la ubicación de tus archivos JS.
  > >Sustituye `docs/jsdoc` con la ubicación donde quieres que se genere el JSDoc.
  ***Asegúrate de tener JSDoc instalado.***
+ [Enlace a una guía de instalación a JSDoc](https://gist.github.com/m-coding/1a7fce771ab0b82904d6)
 
  ```bash
 jsdoc src/js -d docs/jsdoc
