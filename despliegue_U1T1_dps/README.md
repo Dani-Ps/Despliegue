@@ -11,7 +11,7 @@ Este proyecto es una aplicación de gestión de biblioteca que permite mantener 
 Puedes clonar este repositorio utilizando el siguiente comando:
 
 ````bash
-git clone https://github.com/tu-usuario/biblioteca-reservas-libros.git
+git clone https://github.com/Dani-Ps/Despliegue
 
 Configuración en IDE
 Abre tu IDE favorito (por ejemplo, Eclipse, IntelliJ, Visual Studio Code, etc.).
@@ -40,6 +40,7 @@ java -jar biblioteca-reservas-libros.jar
 ## Ejecución en JavaScript
 
 1. Asegúrate de tener Node.js instalado.
+
 2. Clona el repositorio:
 
 ```bash
