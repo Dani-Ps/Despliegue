@@ -43,7 +43,7 @@ java -jar biblioteca-reservas-libros.jar
 2. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tuusuario/biblioteca-reservas-libros.git //TODO
+git clone https://github.com/Dani-Ps/Despliegue
 
 cd biblioteca-reservas-libros/js
 npm install
