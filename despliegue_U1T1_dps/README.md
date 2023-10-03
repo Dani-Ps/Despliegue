@@ -112,20 +112,20 @@ jsdoc src/js -d docs/jsdoc
    - [Selección de elementos (body, h1, p, ul, li)](#selección-de-elementos-body-h1-p-ul-li)
    
 2. [Estilos del Cuerpo (body)](#estilos-del-cuerpo-body)
-   - [Fuente y Familia de Fuente ('Helvetica, Arial, sans-serif')](#fuente-y-familia-de-fuente- -a-helvetica-arial-sans-serif)
+   - [Fuente y Familia de Fuente ('Helvetica, Arial, sans-serif')](#fuente-y-familia-de-fuente-a-helvetica-arial-sans-serif)
    - [Color de Fondo (#f0f0f0)](#color-de-fondo-f0f0f0)
-   - [Color del Texto (  a #555)](#color-del-texto- -a-555)
-   - [Espaciado entre Líneas (  a 1.4)](#espaciado-entre-líneas- -a-14)
+   - [Color del Texto (#555)](#color-del-texto-a-555)
+   - [Espaciado entre Líneas (1.4)](#espaciado-entre-líneas-a-14)
 
 3. [Estilos del Encabezado (header)](#estilos-del-encabezado-header)
    - [Color de Fondo (#333)](#color-de-fondo-333)
    - [Color del Texto (#fff)](#color-del-texto-fff)
-   - [Espaciado Interior (15px en la parte superior e inferior, 0 en los lados)](#espaciado-interior- -a-15px-en-la-parte-superior-e-inferior-0-en-los-lados)
+   - [Espaciado Interior (15px en la parte superior e inferior, 0 en los lados)](#espaciado-interior-a-15px-en-la-parte-superior-e-inferior-0-en-los-lados)
    - [Alineación del Texto (Centrado)](#alineación-del-texto-centrado)
 
 4. [Estilos de Encabezados de Nivel 1 (h1)](#estilos-de-encabezados-de-nivel-1-h1)
-   - [Tamaño de Fuente (  a 40px)](#tamaño-de-fuente-a-40px)
-   - [Margen Inferior (  a 30px)](#margen-inferior-a-30px)
+   - [Tamaño de Fuente (40px)](#tamaño-de-fuente-a-40px)
+   - [Margen Inferior (30px)](#margen-inferior-a-30px)
 
 5. [Estilos de la Barra de Navegación (nav)](#estilos-de-la-barra-de-navegación-nav)
    - [Color de Fondo (#444)](#color-de-fondo-444)
@@ -133,7 +133,7 @@ jsdoc src/js -d docs/jsdoc
 
 6. [Estilos de Enlaces en la Navegación (nav a)](#estilos-de-enlaces-en-la-navegación-nav-a)
    - [Color del Texto (#eee)](#color-del-texto-eee)
-   - [Decoración de Subrayado ('none')](#decoración-de-subrayado- -a-none)
+   - [Decoración de Subrayado ('none')](#decoración-de-subrayado-a-none)
    - [Margen Derecho entre Enlaces (20px)](#margen-derecho-entre-enlaces-a-20px)
 
 7. [Estilos del Enlace Actual en la Navegación (nav a.current)](#estilos-del-enlace-actual-en-la-navegación-nav-acurrent)
@@ -143,7 +143,7 @@ jsdoc src/js -d docs/jsdoc
 8. [Estilos del Contenido Principal (.main-content)](#estilos-del-contenido-principal-main-content)
    - [Espaciado Interior (30px)](#espaciado-interior-a-30px)
    - [Color de Fondo (#f5f5f5)](#color-de-fondo-f5f5f5)
-   - [Sombra Ligera ( 2px 2px 5px rgba(0, 0, 0, 0.2))](#sombra-ligera-a-2px-2px-5px-rgba0-0-0-02)
+   - [Sombra Ligera (2px 2px 5px rgba(0, 0, 0, 0.2))](#sombra-ligera-a-2px-2px-5px-rgba0-0-0-02)
 
 9. [Estilos de la Sección de Productos (.product-section)](#estilos-de-la-sección-de-productos-product-section)
    - [Margen Superior (30px)](#margen-superior-a-30px)
@@ -153,13 +153,13 @@ jsdoc src/js -d docs/jsdoc
 
 11. [Estilos de Elementos de Lista de Productos (.product-list-item)](#estilos-de-elementos-de-lista-de-productos-product-list-item)
     - [Borde (2px solid #ddd)](#borde-a-2px-solid-ddd)
-    - [Espaciado Interior (a 15px)](#espaciado-interior-a-15px)
+    - [Espaciado Interior (15px)](#espaciado-interior-a-15px)
     - [Margen Inferior (15px)](#margen-inferior-a-15px)
 
 12. [Estilos del Pie de Página (footer)](#estilos-del-pie-de-página-footer)
     - [Color de Fondo (#333)](#color-de-fondo-333)
     - [Color del Texto (#eee)](#color-del-texto-eee)
-    - [Espaciado Interior (  a 15px en la parte superior e inferior, 0 en los lados)](#espaciado-interior- -a-15px-en-la-parte-superior-e-inferior-0-en-los-lados)
+    - [Espaciado Interior (15px en la parte superior e inferior, 0 en los lados)](#espaciado-interior-a-15px-en-la-parte-superior-e-inferior-0-en-los-lados)
     - [Alineación del Texto (Centrado)](#alineación-del-texto-centrado)
 
 13. [Estilos para Pantallas Pequeñas (Media Query)](#estilos-para-pantallas-pequeñas-media-query)
@@ -172,6 +172,7 @@ jsdoc src/js -d docs/jsdoc
 
 [Tipo de Fuente](#tipo-de-fuente)
    - [body: 'Helvetica, Arial, sans-serif'](body-arial-sans-serif)
+
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
