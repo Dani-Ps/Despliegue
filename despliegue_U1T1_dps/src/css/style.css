@@ -1,70 +1,168 @@
 /*-------------------------------------------------------------------
 Copyright (C) 2023-2024 <Daniel Perez Serrano>. All rights reserved.
-Version: 1.0
+Version: 1.1
 Asignado a: Dani.dev
 
 [Tabla de contenidos]
 
- 1. Valores Predeterminados
+1. Valores Predeterminados
    - Selección de elementos (body, h1, p, ul, li)
    
 2. Estilos del Cuerpo (body)
-   - Fuente y Familia de Fuente
+   - Fuente y Familia de Fuente (Cambió a 'Helvetica, Arial, sans-serif')
    - Color de Fondo (#f0f0f0)
-   - Color del Texto (#333)
-   - Espaciado entre Líneas
+   - Color del Texto (Cambiado a #555)
+   - Espaciado entre Líneas (Cambiado a 1.4)
 
 3. Estilos del Encabezado (header)
    - Color de Fondo (#333)
    - Color del Texto (#fff)
-   - Espaciado Interior
-   - Alineación del Texto
+   - Espaciado Interior (Cambiado a 15px en la parte superior e inferior, 0 en los lados)
+   - Alineación del Texto (Centrado)
 
 4. Estilos de Encabezados de Nivel 1 (h1)
-   - Tamaño de Fuente
-   - Margen Inferior
+   - Tamaño de Fuente (Cambiado a 40px)
+   - Margen Inferior (Cambiado a 30px)
 
 5. Estilos de la Barra de Navegación (nav)
    - Color de Fondo (#444)
-   - Espaciado Interior
+   - Espaciado Interior (Cambiado a 15px)
 
 6. Estilos de Enlaces en la Navegación (nav a)
-   - Color del Texto (#fff)
-   - Decoración de Subrayado
-   - Margen Derecho entre Enlaces
+   - Color del Texto (#eee)
+   - Decoración de Subrayado (Cambiado a 'none')
+   - Margen Derecho entre Enlaces (Cambiado a 20px)
 
 7. Estilos del Enlace Actual en la Navegación (nav a.current)
    - Peso de la Fuente en Negrita
    - Color del Enlace Actual (#ff6600)
 
 8. Estilos del Contenido Principal (.main-content)
-   - Espaciado Interior
-   - Color de Fondo (#fff)
-   - Sombra Ligera
+   - Espaciado Interior (Cambiado a 30px)
+   - Color de Fondo (#f5f5f5)
+   - Sombra Ligera (Cambiado a 2px 2px 5px rgba(0, 0, 0, 0.2))
 
 9. Estilos de la Sección de Productos (.product-section)
-   - Margen Superior
+   - Margen Superior (Cambiado a 30px)
 
 10. Estilos de Listas de Productos (.product-list)
-    - Eliminación de Viñetas de Lista
+    - Eliminación de Viñetas de Lista (Cambiado a 'disc')
 
 11. Estilos de Elementos de Lista de Productos (.product-list-item)
-    - Borde
-    - Espaciado Interior
-    - Margen Inferior
+    - Borde (Cambiado a 2px solid #ddd)
+    - Espaciado Interior (Cambiado a 15px)
+    - Margen Inferior (Cambiado a 15px)
 
 12. Estilos del Pie de Página (footer)
     - Color de Fondo (#333)
-    - Color del Texto (#fff)
-    - Espaciado Interior
-    - Alineación del Texto
+    - Color del Texto (#eee)
+    - Espaciado Interior (Cambiado a 15px en la parte superior e inferior, 0 en los lados)
+    - Alineación del Texto (Centrado)
 
 13. Estilos para Pantallas Pequeñas (Media Query)
-    - Reducción del Tamaño de Fuente para h1
-    - Reducción del Tamaño de Fuente para .main-content
+    - Reducción del Tamaño de Fuente para h1 (Cambiado a 24px)
+    - Reducción del Tamaño de Fuente para .main-content (Cambiado a 14px)
 
-    [Tipografias]
-    
-    body:   Arial, sans-serif
+14. Nuevas Clases
+    - Estilo para la Clase .special-text
+    - Estilo para la Clase .highlight-box
+
+[Tipo de Fuente]
+
+body:   'Helvetica, Arial, sans-serif'
 
 -----------------------------------------------------------------------------------*/
+
+/* Establece los valores predeterminados de margen y relleno en 0 para varios elementos HTML */
+body,
+h1,
+p,
+ul,
+li {
+   margin: 0;
+   padding: 0;
+}
+
+/* Estilo para la Clase .special-text */
+.special-text {
+   font-weight: bold;
+   color: #ff3300; /* Cambié el color a un tono de rojo */
+}
+
+/* Estilo para la Clase .highlight-box */
+.highlight-box {
+   background-color: #ffff00; /* Cambié el fondo a amarillo */
+   border: 2px solid #ffcc00; /* Cambié el borde a un tono de amarillo más oscuro */
+   padding: 10px; /* Añadí espaciado interior */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+   font-family: "Helvetica, Arial, sans-serif"; /* Fuente y tipo de fuente utilizados para el texto en el cuerpo */
+   background-color: #f0f0f0; /* Color de fondo del cuerpo */
+   color: #555; /* Color del texto en el cuerpo */
+   line-height: 1.4; /* Espaciado entre líneas del texto en el cuerpo */
+}
+
+/* Estilos para el encabezado */
+header {
+   background-color: #333; /* Color de fondo del encabezado */
+   color: #fff; /* Color del texto en el encabezado */
+   padding: 15px 0; /* Espaciado interior del encabezado (15px en la parte superior e inferior, 0 en los lados) */
+   text-align: center; /* Alineación del texto en el encabezado */
+}
+
+/* Estilos para encabezados de nivel 1 (H1) */
+h1 {
+   font-size: 40px; /* Tamaño de fuente para H1 */
+   margin-bottom: 30px; /* Margen inferior para H1 */
+}
+
+/* Estilos para la navegación */
+nav {
+   background-color: #444; /* Color de fondo de la barra de navegación */
+   padding: 15px; /* Espaciado interior de la barra de navegación */
+}
+
+/* Estilos para enlaces dentro de la navegación */
+nav a {
+   color: #eee; /* Color del texto de los enlaces en la navegación */
+   text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+   margin-right: 20px; /* Margen derecho entre enlaces */
+}
+
+/* Estilos para el enlace actual en la navegación */
+nav a.current {
+   font-weight: bold; /* Establece el peso de la fuente en negrita para el enlace actual */
+   color: #ff6600; /* Color del enlace actual */
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+   padding: 30px; /* Espaciado interior del contenido principal */
+   background-color: #f5f5f5; /* Color de fondo del contenido principal */
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenido principal */
+}
+
+/* Estilos para la sección de productos */
+.product-section {
+   margin-top: 30px; /* Margen superior de la sección de productos */
+}
+
+/* Estilos para listas de productos */
+.product-list {
+   list-style: disc; /* Utiliza viñetas de lista estilo 'disc' */
+}
+
+/* Estilos para elementos de la lista de productos */
+.product-list-item {
+   border: 2px solid #ddd; /* Borde alrededor de los elementos de la lista de productos */
+   padding: 15px; /* Espaciado interior de los elementos de la lista de productos */
+   margin-bottom: 15px; /* Margen inferior entre elementos de la lista de productos */
+}
+
+/* Estilos para el pie de página */
+footer {
+   background-color: #333; /* Color de fondo del pie de página */
+   color: #eee; /* Color del texto en el pie de página */
+}
