@@ -25,12 +25,12 @@ Puedes clonar este repositorio utilizando el siguiente comando:
 ### **Ejecución en Java**
 >
 > Configuración en IDE
-
-1. Abre tu IDE favorito (por ejemplo, Eclipse, IntelliJ, Visual Studio Code, etc.).
-2. Importa el proyecto desde la ubicación donde lo has clonado.
-3. Ejecución en local
-4. Abre el proyecto en tu IDE.
-5. Ejecuta el archivo Main.java para iniciar la aplicación.
+> >
+> > 1. Abre tu IDE favorito (por ejemplo, Eclipse, IntelliJ, Visual  Studio Code, etc.).
+> > 2. Importa el proyecto desde la ubicación donde lo has clonado.
+> > 3. Ejecución en local
+> > 4. Abre el proyecto en tu IDE.
+> > 5. Ejecuta el archivo Main.java para iniciar la aplicación.
 
 ## JavaScript
 
@@ -54,9 +54,9 @@ node main.js
 
 ### Para generar la documentación, se utilizaron los siguientes comandos
 
- Generar JavaDoc
- > Sustituye `./src/` con la ubicación de tus archivos Java.
- > Sustituye `./docs/javadoc` con la ubicación donde quieres que se genere el JavaDoc.
+ > Generar JavaDoc
+ > > Sustituye `./src/` con la ubicación de tus archivos Java.
+ > > Sustituye `./docs/javadoc` con la ubicación donde quieres que se genere el JavaDoc.
 
 ```bash
 javadoc -d ./docs/javadoc -sourcepath ./src/ -subpackages filejava
