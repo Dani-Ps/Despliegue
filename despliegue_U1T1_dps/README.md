@@ -9,7 +9,8 @@
 
 La documentación de este proyecto ha sido generada y está disponible en los siguientes enlaces:
 
--[Documentación JavaDoc](./docs/javadoc/index.html).< /br> -[Documentación JSDoc](./docs/jsdoc/index.html).
+- [Documentación JavaDoc](./docs/javadoc/index.html)
+- [Documentación JSDoc](./docs/jsdoc/index.html)
 
 ## Instrucciones para clonar, configurar e ejecutar en local
 
