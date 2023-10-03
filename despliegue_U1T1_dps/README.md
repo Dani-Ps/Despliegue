@@ -9,8 +9,7 @@
 
 La documentación de este proyecto ha sido generada y está disponible en los siguientes enlaces:
 
->[Documentación JavaDoc](./docs/javadoc/index.html)
->[Documentación JSDoc](./docs/jsdoc/index.html)
+-[Documentación JavaDoc](./docs/javadoc/index.html).< /br> -[Documentación JSDoc](./docs/jsdoc/index.html).
 
 ## Instrucciones para clonar, configurar e ejecutar en local
 
@@ -18,15 +17,15 @@ La documentación de este proyecto ha sido generada y está disponible en los si
 
 Puedes clonar este repositorio utilizando el siguiente comando:
 
->``git clone https://github.com/Dani-Ps/Despliegue``
+> `git clone https://github.com/Dani-Ps/Despliegue`
 
 ## Java
 
 ### **Ejecución en Java**
->
+
 > Configuración en IDE
-> >
-> > 1. Abre tu IDE favorito (por ejemplo, Eclipse, IntelliJ, Visual  Studio Code, etc.).
+>
+> > 1. Abre tu IDE favorito (por ejemplo, Eclipse, IntelliJ, Visual Studio Code, etc.).
 > > 2. Importa el proyecto desde la ubicación donde lo has clonado.
 > > 3. Ejecución en local
 > > 4. Abre el proyecto en tu IDE.
@@ -54,21 +53,22 @@ node main.js
 
 ### Para generar la documentación, se utilizaron los siguientes comandos
 
- > Generar JavaDoc
- > > Sustituye `./src/` con la ubicación de tus archivos Java.
- > > Sustituye `./docs/javadoc` con la ubicación donde quieres que se genere el JavaDoc.
+> Generar JavaDoc
+>
+> > Sustituye `./src/` con la ubicación de tus archivos Java.
+> > Sustituye `./docs/javadoc` con la ubicación donde quieres que se genere el JavaDoc.
 
 ```bash
 javadoc -d ./docs/javadoc -sourcepath ./src/ -subpackages filejava
 ```
 
- > Generar JSDoc (para JavaScript)
- > >Sustituye `src/js` con la ubicación de tus archivos JS.
- > >Sustituye `docs/jsdoc` con la ubicación donde quieres que se genere el JSDoc.
- ***Asegúrate de tener JSDoc instalado.***
- [Enlace a una guía de instalación a JSDoc](https://gist.github.com/m-coding/1a7fce771ab0b82904d6)
+> Generar JSDoc (para JavaScript)
+>
+> > Sustituye `src/js` con la ubicación de tus archivos JS.
+> > Sustituye `docs/jsdoc` con la ubicación donde quieres que se genere el JSDoc.
+> > **_Asegúrate de tener JSDoc instalado._** > > [Enlace a una guía de instalación a JSDoc](https://gist.github.com/m-coding/1a7fce771ab0b82904d6)
 
- ```bash
+```bash
 jsdoc src/js -d docs/jsdoc
 ```
 
