@@ -2,7 +2,7 @@
 
 ## Descripción del proyecto
 
-Este proyecto es una aplicación de gestión de biblioteca que permite mantener un registro de libros y reservas. Está escrito en Java y JavaScript, y utiliza documentación generada para facilitar su comprensión y desarrollo.
+Este proyecto es una aplicación de gestión de biblioteca que permite mantener un registro de libros y reservas.<br /> Está escrito en Java y JavaScript, y utiliza documentación generada para facilitar su comprensión y desarrollo.
 
 ## Instrucciones para clonar, configurar e ejecutar en local
 
@@ -24,7 +24,8 @@ Puedes clonar este repositorio utilizando el siguiente comando:
 ### Enlaces a la documentación generada
 La documentación de este proyecto ha sido generada y está disponible en los siguientes enlaces:
 
-[Documentación JavaDoc](./docs/javadoc/index.html)
+[Documentación JavaDoc](./docs/javadoc/index.html)/
+
 [Documentación JSDoc](./docs/jsdoc/index.html)
 
 ### Ejecución en Java
@@ -45,11 +46,11 @@ La documentación de este proyecto ha sido generada y está disponible en los si
 
 Crea una caprpeta en local y sigue los sguiente comandos: 
 ```bash
-``git init
-``git clone https://github.com/Dani-Ps/Despliegue``
-``cd biblioteca-reservas-libros/js``
-``npm install``
-``node main.js``
+git init
+git clone https://github.com/Dani-Ps/Despliegue
+cd biblioteca-reservas-libros/js
+npm install
+node main.js
 ```
 
 ## Comandos utilizados para generar la documentación
@@ -57,7 +58,7 @@ Crea una caprpeta en local y sigue los sguiente comandos:
 ### Para generar la documentación, se utilizaron los siguientes comandos:
 
  Generar JavaDoc
- > Sustituye `./src/` con la ubicación de tus archivos Java.
+ > Sustituye `./src/` con la ubicación de tus archivos Java.<br />
  > Sustituye `./docs/javadoc ` con la ubicación donde quieres que se genere el JavaDoc.
 
 ```bash
@@ -65,8 +66,9 @@ javadoc -d ./docs/javadoc -sourcepath ./src/ -subpackages filejava
 ```
 
  Generar JSDoc (para JavaScript)
- > Sustituye `src/js` con la ubicación de tus archivos JS.
+ > Sustituye `src/js` con la ubicación de tus archivos JS.<br />
  > Sustituye `docs/jsdoc` con la ubicación donde quieres que se genere el JSDoc.
+
  ***Asegúrate de tener JSDoc instalado.***
 
  ```bash
