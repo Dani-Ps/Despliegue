@@ -75,7 +75,7 @@ Puedes clonar este repositorio utilizando el siguiente comando:
 > 
 > > 1. Asegúrate de tener Node.js instalado.
 > > 2. Clona el repositorio:
-> > 3. Crea una caprpeta en local y sigue los sguiente comandos:
+> > 3. Crea una carpeta en local y sigue los sguiente comandos:
 ```bash
 git init
 git clone https://github.com/Dani-Ps/Despliegue
