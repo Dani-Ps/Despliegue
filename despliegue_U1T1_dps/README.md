@@ -10,66 +10,72 @@ Este proyecto es una aplicación de gestión de biblioteca que permite mantener 
 
 Puedes clonar este repositorio utilizando el siguiente comando:
 
-````bash
-git clone https://github.com/Dani-Ps/Despliegue
 
-Configuración en IDE
-Abre tu IDE favorito (por ejemplo, Eclipse, IntelliJ, Visual Studio Code, etc.).
-Importa el proyecto desde la ubicación donde lo has clonado.
-Ejecución en local
-Abre el proyecto en tu IDE.
-Ejecuta el archivo Main.java para iniciar la aplicación.
-Enlaces a la documentación generada
+``git clone https://github.com/Dani-Ps/Despliegue``
+
+> Configuración en IDE
+
+1. Abre tu IDE favorito (por ejemplo, Eclipse, IntelliJ, Visual Studio Code, etc.).
+2. Importa el proyecto desde la ubicación donde lo has clonado.
+3.Ejecución en local
+4. Abre el proyecto en tu IDE.
+5. Ejecuta el archivo Main.java para iniciar la aplicación.
+   
+### Enlaces a la documentación generada
 La documentación de este proyecto ha sido generada y está disponible en los siguientes enlaces:
 
 [Documentación JavaDoc](./docs/javadoc/index.html)
 [Documentación JSDoc](./docs/jsdoc/index.html)
 
-## Ejecución en Java
+### Ejecución en Java
 
 1. Asegúrate de tener Java JDK instalado.
-2. Descarga el archivo JAR de la biblioteca desde [releases](enlace-a-tus-releases).
+2. Descarga el archivo JAR de la biblioteca desde [releases]([enlace-a-tus-releases](https://www.java.com/es/download/manual.jsp)).
 3. Ejecuta la biblioteca en tu terminal:
 
-```bash
-java -jar biblioteca-reservas-libros.jar
+``java -jar biblioteca-reservas-libros.jar``
 
 
-**JavaScript:**
-```markdown
-## Ejecución en JavaScript
+## JavaScript:
+### **Ejecución en JavaScript**
 
 1. Asegúrate de tener Node.js instalado.
 
 2. Clona el repositorio:
 
+Crea una caprpeta en local y sigue los sguiente comandos: 
 ```bash
-git clone https://github.com/Dani-Ps/Despliegue
+``git init
+``git clone https://github.com/Dani-Ps/Despliegue``
+``cd biblioteca-reservas-libros/js``
+``npm install``
+``node main.js``
+```
 
-cd biblioteca-reservas-libros/js
-npm install
-node main.js
+## Comandos utilizados para generar la documentación
 
+### Para generar la documentación, se utilizaron los siguientes comandos:
 
-Comandos utilizados para generar la documentación
-Para generar la documentación, se utilizaron los siguientes comandos:
+ Generar JavaDoc
+ > Sustituye `./src/` con la ubicación de tus archivos Java.
+ > Sustituye `./docs/javadoc ` con la ubicación donde quieres que se genere el JavaDoc.
 
-# Generar JavaDoc
-# Sustituye './src/' con la ubicación de tus archivos Java.
-# Sustitue './docs/javadoc'con la ubicación donde quieres que se genere el JavaDoc.
+```bash
 javadoc -d ./docs/javadoc -sourcepath ./src/ -subpackages filejava
+```
 
+ Generar JSDoc (para JavaScript)
+ > Sustituye `src/js` con la ubicación de tus archivos JS.
+ > Sustituye `docs/jsdoc` con la ubicación donde quieres que se genere el JSDoc.
+ ***Asegúrate de tener JSDoc instalado.***
 
-# Generar JSDoc (para JavaScript)
-# Sustituye 'src/js' con la ubicación de tus archivos JS.
-# Sustitue 'docs/jsdoc'con la ubicación donde quieres que se genere el JSDoc.
-# Asegúrate de tener JSDoc instalado.
+ ```bash
 jsdoc src/js -d docs/jsdoc
+```
 
+## Estructura de directorios en formato árbol
 
-Estructura de directorios en formato árbol
-
-
+```bash
 /biblioteca-reservas-libros
 |-- /src
 |   |-- /filejava
@@ -87,7 +93,7 @@ Estructura de directorios en formato árbol
 |   |   |-- index.html
 |-- README.md
 |-- CHANGELOG.md
-````
+```
 
 ## Estructura del Proyecto
 
