@@ -9,9 +9,8 @@
 
 La documentación de este proyecto ha sido generada y está disponible en los siguientes enlaces:
 
-[Documentación JavaDoc](./docs/javadoc/index.html)/
-
-[Documentación JSDoc](./docs/jsdoc/index.html)
+>[Documentación JavaDoc](./docs/javadoc/index.html)
+>[Documentación JSDoc](./docs/jsdoc/index.html)
 
 ## Instrucciones para clonar, configurar e ejecutar en local
 
@@ -19,7 +18,7 @@ La documentación de este proyecto ha sido generada y está disponible en los si
 
 Puedes clonar este repositorio utilizando el siguiente comando:
 
-``git clone https://github.com/Dani-Ps/Despliegue``
+>``git clone https://github.com/Dani-Ps/Despliegue``
 
 ## Java
 
@@ -32,14 +31,6 @@ Puedes clonar este repositorio utilizando el siguiente comando:
 3. Ejecución en local
 4. Abre el proyecto en tu IDE.
 5. Ejecuta el archivo Main.java para iniciar la aplicación.
-
-### Ejecución en Java
-
-1. Asegúrate de tener Java JDK instalado.
-2. Descarga el archivo JAR de la biblioteca desde [releases]([enlace-a-tus-releases](https://www.java.com/es/download/manual.jsp)).
-3. Ejecuta la biblioteca en tu terminal:
-
-``java -jar biblioteca-reservas-libros.jar``
 
 ## JavaScript
 
