@@ -67,8 +67,7 @@ javadoc -d ./docs/javadoc -sourcepath ./src/ -subpackages filejava
 
  Generar JSDoc (para JavaScript)
  > Sustituye `src/js` con la ubicación de tus archivos JS.<br />
- > Sustituye `docs/jsdoc` con la ubicación donde quieres que se genere el JSDoc.
-
+ > Sustituye `docs/jsdoc` con la ubicación donde quieres que se genere el JSDoc.<br />
  ***Asegúrate de tener JSDoc instalado.***
 
  ```bash
