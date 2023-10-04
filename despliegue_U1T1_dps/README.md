@@ -1,5 +1,15 @@
 # Biblioteca de Reservas de Libros
 
+> ## Curso Escolar 2023-2024
+>
+>## Autor: [Daniel Perez Serrano](https://github.com/Dani-Ps)
+>
+>## Tutor: [Antonio Grabiel Gonzales Casado](https://github.com/antonio-gabriel-gonzalez-casado)
+>
+>## Fecha de Inicio: 01-10-2023
+>
+>## Fecha de Finalización: 01-06-2024
+
 ## Descripción del proyecto
 
 > Este proyecto es una aplicación de gestión de biblioteca que permite mantener un registro de libros y reservas.
@@ -39,7 +49,6 @@ El proyecto sigue la siguiente estructura de directorios:
 - `/css` contiene archivos de estilo CSS (si es aplicable).
 - `/node_modules` contiene las dependencias de Node.js (JavaScript) si las hubiera. Esta carpeta se utiliza para almacenar las bibliotecas y módulos necesarios para el proyecto JavaScript.
 
-
 ## Enlaces a la documentación generada
 
 La documentación de este proyecto ha sido generada y está disponible en los siguientes enlaces:
@@ -72,10 +81,11 @@ Puedes clonar este repositorio utilizando el siguiente comando:
 ### **Ejecución en JavaScript**
 
 > Configuración de entorno
-> 
+>
 > > 1. Asegúrate de tener Node.js instalado.
 > > 2. Clona el repositorio:
 > > 3. Crea una carpeta en local y sigue los sguiente comandos:
+> >
 ```bash
 git init
 git clone https://github.com/Dani-Ps/Despliegue
@@ -106,71 +116,73 @@ javadoc -d ./docs/javadoc -sourcepath ./src/ -subpackages filejava
 ```bash
 jsdoc src/js -d docs/jsdoc
 ```
+
 ## Tabla de contenido de la hoja de estilo
-1. [Valores Predeterminados](#valores-predeterminados)
-   - [Selección de elementos (body, h1, p, ul, li)](#selección-de-elementos-body-h1-p-ul-li)
-   
-2. [Estilos del Cuerpo (body)](#estilos-del-cuerpo-body)
-   - [Fuente y Familia de Fuente ('Helvetica, Arial, sans-serif')](#fuente-y-familia-de-fuente-a-helvetica-arial-sans-serif)
-   - [Color de Fondo (#f0f0f0)](#color-de-fondo-f0f0f0)
-   - [Color del Texto (#555)](#color-del-texto-a-555)
-   - [Espaciado entre Líneas (1.4)](#espaciado-entre-líneas-a-14)
 
-3. [Estilos del Encabezado (header)](#estilos-del-encabezado-header)
-   - [Color de Fondo (#333)](#color-de-fondo-333)
-   - [Color del Texto (#fff)](#color-del-texto-fff)
-   - [Espaciado Interior (15px en la parte superior e inferior, 0 en los lados)](#espaciado-interior-a-15px-en-la-parte-superior-e-inferior-0-en-los-lados)
-   - [Alineación del Texto (Centrado)](#alineación-del-texto-centrado)
+1. Valores Predeterminados
+   - Selección de elementos (body, h1, p, ul, li)
 
-4. [Estilos de Encabezados de Nivel 1 (h1)](#estilos-de-encabezados-de-nivel-1-h1)
-   - [Tamaño de Fuente (40px)](#tamaño-de-fuente-a-40px)
-   - [Margen Inferior (30px)](#margen-inferior-a-30px)
+2. Estilos del Cuerpo (body)
+   - Fuente y Familia de Fuente ('Helvetica, Arial, sans-serif')
+   - Color de Fondo (#f0f0f0)
+   - Color del Texto (#555)
+   - Espaciado entre Líneas (1.4)
 
-5. [Estilos de la Barra de Navegación (nav)](#estilos-de-la-barra-de-navegación-nav)
-   - [Color de Fondo (#444)](#color-de-fondo-444)
-   - [Espaciado Interior (15px)](#espaciado-interior-a-15px)
+3. Estilos del Encabezado (header)
+   - Color de Fondo (#333)
+   - Color del Texto (#fff)
+   - Espaciado Interior (15px en la parte superior e inferior, 0 en los lados)
+   - Alineación del Texto (Centrado)
 
-6. [Estilos de Enlaces en la Navegación (nav a)](#estilos-de-enlaces-en-la-navegación-nav-a)
-   - [Color del Texto (#eee)](#color-del-texto-eee)
-   - [Decoración de Subrayado ('none')](#decoración-de-subrayado-a-none)
-   - [Margen Derecho entre Enlaces (20px)](#margen-derecho-entre-enlaces-a-20px)
+4. Estilos de Encabezados de Nivel 1 (h1)
+   - Tamaño de Fuente (40px)
+   - Margen Inferior (30px)
 
-7. [Estilos del Enlace Actual en la Navegación (nav a.current)](#estilos-del-enlace-actual-en-la-navegación-nav-acurrent)
-   - [Peso de la Fuente en Negrita](#peso-de-la-fuente-en-negrita)
-   - [Color del Enlace Actual (#ff6600)](#color-del-enlace-actual-ff6600)
+5. Estilos de la Barra de Navegación (nav)
+   - Color de Fondo (#444)
+   - Espaciado Interior (15px)
 
-8. [Estilos del Contenido Principal (.main-content)](#estilos-del-contenido-principal-main-content)
-   - [Espaciado Interior (30px)](#espaciado-interior-a-30px)
-   - [Color de Fondo (#f5f5f5)](#color-de-fondo-f5f5f5)
-   - [Sombra Ligera (2px 2px 5px rgba(0, 0, 0, 0.2))](#sombra-ligera-a-2px-2px-5px-rgba0-0-0-02)
+6. Estilos de Enlaces en la Navegación (nav a)
+   - Color del Texto (#eee)
+   - Decoración de Subrayado ('none')
+   - Margen Derecho entre Enlaces (20px)
 
-9. [Estilos de la Sección de Productos (.product-section)](#estilos-de-la-sección-de-productos-product-section)
-   - [Margen Superior (30px)](#margen-superior-a-30px)
+7. Estilos del Enlace Actual en la Navegación (nav a.current)
+   - Peso de la Fuente en Negrita
+   - Color del Enlace Actual (#ff6600)
 
-10. [Estilos de Listas de Productos (.product-list)](#estilos-de-listas-de-productos-product-list)
-    - [Eliminación de Viñetas de Lista ('disc')](#eliminación-de-viñetas-de-lista-a-disc)
+8. Estilos del Contenido Principal (.main-content)
+   - Espaciado Interior (30px)
+   - Color de Fondo (#f5f5f5)
+   - Sombra Ligera (2px 2px 5px rgba(0, 0, 0, 0.2))
 
-11. [Estilos de Elementos de Lista de Productos (.product-list-item)](#estilos-de-elementos-de-lista-de-productos-product-list-item)
-    - [Borde (2px solid #ddd)](#borde-a-2px-solid-ddd)
-    - [Espaciado Interior (15px)](#espaciado-interior-a-15px)
-    - [Margen Inferior (15px)](#margen-inferior-a-15px)
+9. Estilos de la Sección de Productos (.product-section)
+   - Margen Superior (30px)
 
-12. [Estilos del Pie de Página (footer)](#estilos-del-pie-de-página-footer)
-    - [Color de Fondo (#333)](#color-de-fondo-333)
-    - [Color del Texto (#eee)](#color-del-texto-eee)
-    - [Espaciado Interior (15px en la parte superior e inferior, 0 en los lados)](#espaciado-interior-a-15px-en-la-parte-superior-e-inferior-0-en-los-lados)
-    - [Alineación del Texto (Centrado)](#alineación-del-texto-centrado)
+10. Estilos de Listas de Productos (.product-list)
+    - Eliminación de Viñetas de Lista ('disc')
 
-13. [Estilos para Pantallas Pequeñas (Media Query)](#estilos-para-pantallas-pequeñas-media-query)
-    - [Reducción del Tamaño de Fuente para h1 (24px)](#reducción-del-tamaño-de-fuente-para-h1-a-24px)
-    - [Reducción del Tamaño de Fuente para .main-content (14px)](#reducción-del-tamaño-de-fuente-para-main-content-a-14px)
+11. Estilos de Elementos de Lista de Productos (.product-list-item)
+    - Borde (2px solid #ddd)
+    - Espaciado Interior (15px)
+    - Margen Inferior (15px)
 
-14. [Nuevas Clases](#nuevas-clases)
-    - [Estilo para la Clase .special-text](#estilo-para-la-clase-special-text)
-    - [Estilo para la Clase .highlight-box](#estilo-para-la-clase-highlight-box)
+12. Estilos del Pie de Página (footer)
+    - Color de Fondo (#333)
+    - Color del Texto (#eee)
+    - Espaciado Interior (15px en la parte superior e inferior, 0 en los lados)
+    - Alineación del Texto (Centrado)
 
-[Tipo de Fuente](#tipo-de-fuente)
-   - [body: 'Helvetica, Arial, sans-serif'](body-arial-sans-serif)
+13. Estilos para Pantallas Pequeñas (Media Query)
+    - Reducción del Tamaño de Fuente para h1 (24px)
+    - Reducción del Tamaño de Fuente para .main-content (14px)
+
+14. Nuevas Clases
+    - Estilo para la Clase .special-text
+    - Estilo para la Clase .highlight-box
+
+Tipo de Fuente: body: 'Helvetica, Arial, sans-serif'
+
 
 ## Licencia
 
