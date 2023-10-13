@@ -2,8 +2,8 @@
 # Proyecto "Soaps Perfums"
 
 #### Curso Escolar 2023-2024
-#### Autor: ([Daniel Perez Serrano.](https://github.com/Dani-Ps))
-#### Tutor: ([Antonio Gabriel Gonzalez Casado.](https://github.com/antonio-gabriel-gonzalez-casado))
+#### Autor: ([Daniel Perez Serrano](https://github.com/Dani-Ps))
+#### Tutor: ([Antonio Gabriel Gonzalez Casado](https://github.com/antonio-gabriel-gonzalez-casado))
 #### Fecha de Inicio: 15-09-2023
 #### Fecha de Finalización: 06-06-2024
 
