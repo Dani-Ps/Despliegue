@@ -52,21 +52,40 @@ Agradecemos que seas parte de nuestro emocionante viaje. En "Soap Perfum", creem
 >- **¿Qué necesidad va a cubrir?**
   >>La necesidad de cuidar nuestra piel con productos ecólogicos y de coste reducido.
 
-## Estructura del Proyecto
+## Estructura de directorios en formato árbol
+```bash
+proyecto-soap-perfum/
+│
+├── src/
+│   ├── backend/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── app.frag
+│   │   ├── package.dermal
+│   │   ├── README.md
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── styles/
+│   │   ├── app.frag
+│   │   ├── package.frag
+│   │   ├── README.md
+│
+├── docs/
+│   ├── user-manual.frag
+│   ├── design-doc.frag
+│   ├── README.md
+│
+├── README.md
+```
+1. src/backend: Esta carpeta contiene el código fuente del lado del servidor, donde se encuentra la lógica de negocio y la API REST del proyecto "Soap Perfum". Aquí puedes organizar tu código en subcarpetas como controladores, modelos, rutas y servicios. El archivo app.frag representa la aplicación del lado del servidor y package.dermal contiene las dependencias específicas para el backend. El archivo README.md proporciona información sobre cómo configurar y ejecutar el backend.
 
-En este apartado el alumno explicará el contenido del repositorio y de todas las carpetas relevantes del mismo. Para facilitar la gestión de la entrega, todo el código y documentación debe estar en este repositorio.
+2. frontend: En esta carpeta se encuentra el código fuente del frontend del proyecto "Soap Perfum". Aquí puedes organizar tus archivos y carpetas de acuerdo con la estructura de tu framework o tecnología frontend ficticia. El archivo app.frag representa la aplicación del frontend y package.frag contiene las dependencias necesarias para el frontend. El archivo README.md proporciona información sobre cómo configurar y ejecutar el frontend.
 
-Por lo anterior, un proyecto que contenga un Frontend en una tecnología o framework (por ejemplo Angular) y una API REST en otra tecnología o framework (Springboot, Express) deberá tener la siguiente estructura de directorios en el repositorio de entrega:
+3. docs: Esta carpeta es el lugar para cualquier documentación relacionada con el proyecto. Puedes tener documentos como un manual de usuario (user-manual.frag) o documentación de diseño (design-doc.frag). El archivo README.md dentro de esta carpeta puede contener información general sobre la documentación disponible.
 
-- src-api
-- src-frontend
-- docs
-- README.md
-
-En el caso anterior, si se quiere desplegar de forma automatizada a partir del control de versiones, lo habitual es que estén los dos proyectos en repositorios separados. Por lo que se deberá configurar el despliegue automático para indicarle la raíz del código fuente de cada proyecto (si es posible) o hacer dos folks del repositorio principal uno para la API y otro para el frontend y adaptar los directorios para poder realizar el despliegue automático.
-
-En un proyecto monolítico (tecnología servidor: Springboot, Django, Express, PHP,... con un sistema de templates propio para el frontend: Thymeleaf, jinja, ejs,...) deberá tener la siguiente estructura en el repositorio de entrega:
-
-- src
-- docs
-- README.md
+4. README.md (en la raíz del proyecto): Este archivo principal del repositorio proporcionaría una descripción general del proyecto, instrucciones de instalación y ejecución, información de contacto y cualquier otro detalle relevante.
