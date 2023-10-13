@@ -1,15 +1,15 @@
 
-# Proyecto "Soap Perfum"
+# Proyecto "Soaps Perfums"
 
 #### Curso Escolar 2023-2024
-#### Autor: [Daniel Perez Serrano]([Enlace a su cuenta de gitHub](https://github.com/Dani-Ps))
-#### Tutor: [Antonio Gabriel Gonzalez Casado]([Enlace a su cuenta de gitHub](https://github.com/antonio-gabriel-gonzalez-casado))
+#### Autor: ([Daniel Perez Serrano.](https://github.com/Dani-Ps))
+#### Tutor: ([Antonio Gabriel Gonzalez Casado.](https://github.com/antonio-gabriel-gonzalez-casado))
 #### Fecha de Inicio: 15-09-2023
 #### Fecha de Finalización: 06-06-2024
 
 ## Breve descripción del proyecto
 
-**Soap Perfum** es un proyecto que fusiona la ciencia dermatológica y la programación para crear una tienda en línea especializada en la venta de jabones con propiedades dermatológicas y fragancias exquisitas. Este emocionante proyecto es desarrollado por estudiantes de la Facultad de Farmacia y Parafarmacia (FAPA), quienes investigan y desarrollan jabones de alta calidad, y estudiantes de programación que han creado una plataforma de comercio electrónico optimizada para la venta de estos productos.
+**Soaps Perfums** es un proyecto que fusiona la ciencia dermatológica y la programación para crear una tienda en línea especializada en la venta de jabones con propiedades dermatológicas y fragancias exquisitas. Este emocionante proyecto es desarrollado por estudiantes de la Facultad de Farmacia y Parafarmacia (FAPA), quienes investigan y desarrollan jabones de alta calidad, y estudiantes de programación que han creado una plataforma de comercio electrónico optimizada para la venta de estos productos.
 
 ## Equipo
 
@@ -23,7 +23,7 @@ Nuestros estudiantes programadores son los responsables de la creación y gesti�
 
 ## Misión
 
-En **Soap Perfum**, nuestra misión es proporcionar productos de alta calidad para el cuidado de la piel con fragancias encantadoras y servicios tecnológicos avanzados. Queremos que sientas la diferencia que hacen nuestros jabones en tu piel y que disfrutes de una experiencia de compra en línea sin preocupaciones.
+En **Soaps Perfums**, nuestra misión es proporcionar productos de alta calidad para el cuidado de la piel con fragancias encantadoras y servicios tecnológicos avanzados. Queremos que sientas la diferencia que hacen nuestros jabones en tu piel y que disfrutes de una experiencia de compra en línea sin preocupaciones.
 
 ## Productos
 
@@ -42,15 +42,15 @@ Agradecemos que seas parte de nuestro emocionante viaje. En "Soap Perfum", creem
 ## Definir el objetivo de la aplicación
 **Tener una gran idea** o encontrar un punto del mercado al que no se esté dando un producto o servicio es el punto de partida en cada nuevo proyecto. Antes de comenzar debes **definir claramente el propósito y la misión de la aplicación web**:
 
-- **¿Qué va a hacer la aplicación?**
-  > La aplicación se encarga de la gestión de pedidos.
-- **¿Cuál es su atractivo principal?** 
-  > El atractivo principal de la aplicación es el de la simplicidad en la compra con 
-  > gracias a un diseño minimalista de la interfaz.
-- **¿Qué problema concreto va a resolver?** 
-  >Más que problema, da cobertura a la necesidad de la población puedan acceder a >jabones de calidad para el cuiado de su piel, además atiende la demanada de >personas con pieles especiales, dando la oportunidad de crear tus propios jabones >con prescipción médica.
-- **¿Qué necesidad va a cubrir?**
-  >La necesidad de cuidar nuestra piel con productos ecólogicos y de coste reducido.
+>- **¿Qué va a hacer la aplicación?**
+  >> La aplicación se encarga de la gestión de pedidos.
+>- **¿Cuál es su atractivo principal?** 
+  >> El atractivo principal de la aplicación es el de la simplicidad en la compra con 
+  >> gracias a un diseño minimalista de la interfaz.
+>- **¿Qué problema concreto va a resolver?** 
+ > >Más que problema, da cobertura a la necesidad de la población puedan acceder a >>jabones de calidad para el cuiado de su piel, además atiende la demanada de >>personas con pieles especiales, dando la oportunidad de crear tus propios jabones >>con prescipción médica.
+>- **¿Qué necesidad va a cubrir?**
+  >>La necesidad de cuidar nuestra piel con productos ecólogicos y de coste reducido.
 
 ## Estructura del Proyecto
 
