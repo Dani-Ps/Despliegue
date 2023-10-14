@@ -15,11 +15,11 @@
 
 ### Equipo de Estudiantes Dermatológicos
 
-Nuestros estudiantes de FAPA se dedican a la investigación y desarrollo de jabones que no solo mantienen la piel limpia, sino que también la cuidan y mejoran. Estas fórmulas dermatológicas abordan diversas necesidades de la piel, desde la sensibilidad hasta el acné y la sequedad. Cada barra de jabón "Soaps Perfums" es el resultado de su dedicación a la ciencia y a la excelencia.
+Los estudiantes de FAPA se dedican a la investigación y desarrollo de jabones que no solo mantienen la piel limpia, sino que también la cuidan y mejoran. Estas fórmulas dermatológicas abordan diversas necesidades de la piel, desde la sensibilidad hasta el acné y la sequedad. Cada barra de jabón "Soaps Perfums" es el resultado de su dedicación a la ciencia y a la excelencia.
 
 ### Equipo de Estudiantes Programadores
 
-Nuestros estudiantes programadores son los responsables de la creación y gestión de la tienda en línea "Soaps Perfums". Han desarrollado una plataforma atractiva y fácil de usar, garantizando una navegación fluida, un proceso de pago seguro y una entrega eficiente. Su experiencia en tecnología es fundamental para brindar una experiencia de compra en línea sin complicaciones.
+Los estudiantes programadores son los responsables de la creación y gestión de la tienda en línea "Soaps Perfums". Han desarrollado una plataforma atractiva y fácil de usar, garantizando una navegación fluida, un proceso de pago seguro y una entrega eficiente. Su experiencia en tecnología es fundamental para brindar una experiencia de compra en línea sin complicaciones.
 
 ## Misión
 
@@ -36,8 +36,6 @@ Al apoyar este proyecto, no solo estás adquiriendo productos de calidad, sino t
 ## Contacto
 
 Para obtener más información, visita nuestro sitio web en [www.soapsperfums.com](https://www.soapsperfums.com) o contáctanos en [info@soapperfum.com](mailto:info@soapsperfums.com).
-
-Agradecemos que seas parte de nuestro emocionante viaje. En "Soaps Perfums", creemos que cada día puede ser una experiencia fragante y rejuvenecedora para tu piel. ¡Descubre el mundo de "Soaps Perfum" y déjanos cuidar de ti!
 
 ## Definir el objetivo de la aplicación
 **Tener una gran idea** o encontrar un punto del mercado al que no se esté dando un producto o servicio es el punto de partida en cada nuevo proyecto. Antes de comenzar debes **definir claramente el propósito y la misión de la aplicación web**:
