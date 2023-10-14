@@ -15,11 +15,11 @@
 
 ### Equipo de Estudiantes Dermatológicos
 
-Nuestros estudiantes de FAPA se dedican a la investigación y desarrollo de jabones que no solo mantienen la piel limpia, sino que también la cuidan y mejoran. Estas fórmulas dermatológicas abordan diversas necesidades de la piel, desde la sensibilidad hasta el acné y la sequedad. Cada barra de jabón "Soap Perfum" es el resultado de su dedicación a la ciencia y a la excelencia.
+Nuestros estudiantes de FAPA se dedican a la investigación y desarrollo de jabones que no solo mantienen la piel limpia, sino que también la cuidan y mejoran. Estas fórmulas dermatológicas abordan diversas necesidades de la piel, desde la sensibilidad hasta el acné y la sequedad. Cada barra de jabón "Soaps Perfums" es el resultado de su dedicación a la ciencia y a la excelencia.
 
 ### Equipo de Estudiantes Programadores
 
-Nuestros estudiantes programadores son los responsables de la creación y gestión de la tienda en línea "Soap Perfum". Han desarrollado una plataforma atractiva y fácil de usar, garantizando una navegación fluida, un proceso de pago seguro y una entrega eficiente. Su experiencia en tecnología es fundamental para brindar una experiencia de compra en línea sin complicaciones.
+Nuestros estudiantes programadores son los responsables de la creación y gestión de la tienda en línea "Soaps Perfums". Han desarrollado una plataforma atractiva y fácil de usar, garantizando una navegación fluida, un proceso de pago seguro y una entrega eficiente. Su experiencia en tecnología es fundamental para brindar una experiencia de compra en línea sin complicaciones.
 
 ## Misión
 
@@ -48,13 +48,13 @@ Agradecemos que seas parte de nuestro emocionante viaje. En "Soap Perfum", creem
   >> El atractivo principal de la aplicación es el de la simplicidad en la compra con 
   >> gracias a un diseño minimalista de la interfaz.
 >- **¿Qué problema concreto va a resolver?** 
- > >Más que problema, da cobertura a la necesidad de la población puedan acceder a >>jabones de calidad para el cuiado de su piel, además atiende la demanada de >>personas con pieles especiales, dando la oportunidad de crear tus propios jabones >>con prescipción médica.
+ > >Más que problema, da cobertura a la necesidad de la población puedan acceder a >>jabones de calidad para el cuiado de su piel, además atiende la demanada de personas con pieles especiales, dando la oportunidad de crear tus propios jabones con prescipción médica.
 >- **¿Qué necesidad va a cubrir?**
   >>La necesidad de cuidar nuestra piel con productos ecólogicos y de coste reducido.
 
 ## Estructura de directorios en formato árbol
 ```bash
-proyecto-soap-perfum/
+proyecto-soaps-perfums/
 │
 ├── src/
 │   ├── backend/
@@ -82,9 +82,9 @@ proyecto-soap-perfum/
 │
 ├── README.md
 ```
-1. src/backend: Esta carpeta contiene el código fuente del lado del servidor, donde se encuentra la lógica de negocio y la API REST del proyecto "Soap Perfum". Aquí puedes organizar tu código en subcarpetas como controladores, modelos, rutas y servicios. El archivo app.frag representa la aplicación del lado del servidor y package.dermal contiene las dependencias específicas para el backend. El archivo README.md proporciona información sobre cómo configurar y ejecutar el backend.
+1. src/backend: Esta carpeta contiene el código fuente del lado del servidor, donde se encuentra la lógica de negocio y la API REST del proyecto "Soaps Perfums". Aquí puedes organizar tu código en subcarpetas como controladores, modelos, rutas y servicios. El archivo app.frag representa la aplicación del lado del servidor y package.dermal contiene las dependencias específicas para el backend. El archivo README.md proporciona información sobre cómo configurar y ejecutar el backend.
 
-2. frontend: En esta carpeta se encuentra el código fuente del frontend del proyecto "Soap Perfum". Aquí puedes organizar tus archivos y carpetas de acuerdo con la estructura de tu framework o tecnología frontend ficticia. El archivo app.frag representa la aplicación del frontend y package.frag contiene las dependencias necesarias para el frontend. El archivo README.md proporciona información sobre cómo configurar y ejecutar el frontend.
+2. frontend: En esta carpeta se encuentra el código fuente del frontend del proyecto "Soaps Perfums". Aquí puedes organizar tus archivos y carpetas de acuerdo con la estructura de tu framework o tecnología frontend ficticia. El archivo app.frag representa la aplicación del frontend y package.frag contiene las dependencias necesarias para el frontend. El archivo README.md proporciona información sobre cómo configurar y ejecutar el frontend.
 
 3. docs: Esta carpeta es el lugar para cualquier documentación relacionada con el proyecto. Puedes tener documentos como un manual de usuario (user-manual.frag) o documentación de diseño (design-doc.frag). El archivo README.md dentro de esta carpeta puede contener información general sobre la documentación disponible.
 
