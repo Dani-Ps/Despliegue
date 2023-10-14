@@ -29,15 +29,15 @@ En **Soaps Perfums**, nuestra misión es proporcionar productos de alta calidad 
 
 Ofrecemos una amplia gama de jabones, cada uno con una fragancia única y beneficios específicos para la piel. Todos nuestros productos están formulados con ingredientes naturales y seguros, asegurando que tu piel esté en las mejores manos.
 
-## Únete a la Aventura de "Soap Perfum"
+## Únete a la Aventura de "Soaps Perfums"
 
-Al apoyar este proyecto, no solo estás adquiriendo productos de calidad, sino también respaldando a jóvenes talentos en el campo de la ciencia y la tecnología que están dedicados a mejorar la calidad de vida de las personas. Únete a la aventura de "Soap Perfum" y descubre cómo podemos hacer que tu piel se sienta y huela mejor que nunca.
+Al apoyar este proyecto, no solo estás adquiriendo productos de calidad, sino también respaldando a jóvenes talentos en el campo de la ciencia y la tecnología que están dedicados a mejorar la calidad de vida de las personas. Únete a la aventura de "Soaps Perfums" y descubre cómo podemos hacer que tu piel se sienta y huela mejor que nunca.
 
 ## Contacto
 
-Para obtener más información, visita nuestro sitio web en [www.soapperfum.com](https://www.soapperfum.com) o contáctanos en [info@soapperfum.com](mailto:info@soapperfum.com).
+Para obtener más información, visita nuestro sitio web en [www.soapsperfums.com](https://www.soapsperfums.com) o contáctanos en [info@soapperfum.com](mailto:info@soapsperfums.com).
 
-Agradecemos que seas parte de nuestro emocionante viaje. En "Soap Perfum", creemos que cada día puede ser una experiencia fragante y rejuvenecedora para tu piel. ¡Descubre el mundo de "Soap Perfum" y déjanos cuidar de ti!
+Agradecemos que seas parte de nuestro emocionante viaje. En "Soaps Perfums", creemos que cada día puede ser una experiencia fragante y rejuvenecedora para tu piel. ¡Descubre el mundo de "Soaps Perfum" y déjanos cuidar de ti!
 
 ## Definir el objetivo de la aplicación
 **Tener una gran idea** o encontrar un punto del mercado al que no se esté dando un producto o servicio es el punto de partida en cada nuevo proyecto. Antes de comenzar debes **definir claramente el propósito y la misión de la aplicación web**:
@@ -48,7 +48,7 @@ Agradecemos que seas parte de nuestro emocionante viaje. En "Soap Perfum", creem
   >> El atractivo principal de la aplicación es el de la simplicidad en la compra con 
   >> gracias a un diseño minimalista de la interfaz.
 >- **¿Qué problema concreto va a resolver?** 
- > >Más que problema, da cobertura a la necesidad de la población puedan acceder a >>jabones de calidad para el cuiado de su piel, además atiende la demanada de personas con pieles especiales, dando la oportunidad de crear tus propios jabones con prescipción médica.
+ > >Más que problema, da cobertura a la necesidad de la población puedan acceder a jabones de calidad para el cuiado de su piel, además atiende la demanada de personas con pieles especiales, dando la oportunidad de crear tus propios jabones con prescipción médica.
 >- **¿Qué necesidad va a cubrir?**
   >>La necesidad de cuidar nuestra piel con productos ecólogicos y de coste reducido.
 
