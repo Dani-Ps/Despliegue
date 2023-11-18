@@ -18,18 +18,17 @@ services:
             - persistent:/var/lib/mysql
         networks:
             - default
-    # Servicio apache2 donde se instala un servidor web cuyo acceso está disponeble por dos puertos 80 y 8086
+    # Servicio apache2 donde se instala un servidor web cuyo acceso está disponible por dos puertos 80 y 8086
     www:
         build: ./apache2-php
         container_name: daweb-docker-lamp-apache2
-        ports: 
+        ports:
             - "80:80"
             - "8060:8060"
         volumes:
-            # Volumen para que los archivos de configuración de los sitios web publicado sean copiados del disco local a su ubicación correcta dentro del contenedor
-            - ./apache2-php/www:/var/www/html
-            # Volumen para que los archivos de configuración de los virtual server sean copiados del disco local a su ubicación correcta dentro del contenedor
+    # ... (otros volúmenes)
             - ./apache2-php/conf:/etc/apache2/sites-available
+            - ./dist:/var/www/html
         networks:
             - default
         depends_on:
@@ -47,7 +46,22 @@ services:
             MYSQL_PORT: ${MYSQL_PORT} 
         depends_on:
             - db
-
+    wordpress:
+        image: wordpress
+        container_name: daweb-docker-lamp-wordpress
+        ports:
+            - "8081:80"  # Puedes ajustar el puerto según tus preferencias
+        environment:
+            WORDPRESS_DB_HOST: db
+            WORDPRESS_DB_USER: root
+            WORDPRESS_DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            WORDPRESS_DB_NAME: wordpress
+        volumes:
+            - ./wordpress:/var/www/html
+        networks:
+            - default
+        depends_on:
+            - db
 # Configuración por defecto de los volumenes de python  
 volumes:
     persistent:
