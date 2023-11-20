@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y \
 # Copiar archivos de configuración de virtual host
 COPY ./conf/*.conf /etc/apache2/sites-available/
 
-# Copiar archivos de contraseñas desde la carpeta dist
+# Copiar archivos de contraseñas desde la carpeta dist // poner esto en el git ignore
+WORKDIR /ruta/a/tu/proyecto/docker-lamp/apache2-php
 COPY ./dist/htpasswd.dist /etc/apache2/htpasswd
 
 # Habilitar los virtual hosts
