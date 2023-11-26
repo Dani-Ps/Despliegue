@@ -101,7 +101,7 @@ MYSQL_PORT=3307
 Copiar el archivo htpasswd.dist a ./apache2-php/etc/apache2/ y añade usuarios para acceder a la intranet:
 
 ```bash
-cp dist/htpasswd.dist ./apache2-php/etc/apache2/
+cp dist/htpasswd.dist ./apache2-php/etc/apache2/.htpasswd
 ```
 
 Los usuarios tiene el formato:
@@ -132,7 +132,7 @@ docker-compose up -d
 Para acceder a al intranet se necesita crear un archivo .htpasswd con los nombres de usuario y sus contraseñas. Se puede usar la herramienta htpasswd para esto. Para ello accede al contenedor daweb-docker-lamp-apache2 a través del terminal mediante el siguiente comando:
 
 ```
-docker excec -it daweb-docker-lamp-apache2
+docker exec -it daweb-docker-lamp-apache2
 ```
 
 Lanzar el comando que crea un usuario llamado usuario2 y pedirá que se introduzca una contraseña:
@@ -160,7 +160,7 @@ docker-compose down
 ## (Opcional) Configuración
 Para acceder a las urls configuradas en los virtual host:
 - **Sitio Principal**: [http://www.local](http://www.local)
-- **Intranet**: [http://intranet.local (usando usuario1 y contraseña:123456789 o el usuario creado en el paso anterior)](http://intranet.local)
+- **Intranet**: [http://intranet.local:8060 (usando usuario1 y contraseña:123456789 o el usuario creado en el paso anterior)](http://intranet.local:8060)
 - **PHP Info**: [http://www.local/phpinfo.php](http://www.local/phpinfo.php)
 - **Conexión a la Base de Datos**: [http://www.local/test-bd.php](http://www.localtest-bd.php)
 - **Phpmyadmin**: [http://www.local:8080 (con el usuario root y la contraseña establecida)](http://www.local:8080)

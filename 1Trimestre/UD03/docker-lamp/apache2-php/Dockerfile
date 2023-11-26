@@ -5,12 +5,12 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Paquetes necesarios de la imagen.
 RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libzip-dev \
-    zlib1g-dev \
-    libonig-dev \
-    vim \
-    sendmail \
+        libpng-dev \
+        libzip-dev \
+        zlib1g-dev \
+        libonig-dev \
+        vim \
+        sendmail \
     && docker-php-ext-install mysqli mbstring zip gd \
     && a2enmod rewrite \
     && apt-get clean \
@@ -20,9 +20,8 @@ RUN apt-get update && apt-get install -y \
 # Copiar archivos de configuración de virtual host
 COPY ./conf/*.conf /etc/apache2/sites-available/
 
-# Copiar archivos de contraseñas desde la carpeta dist // poner esto en el git ignore
-WORKDIR /ruta/a/tu/proyecto/docker-lamp/apache2-php
-COPY ./dist/htpasswd.dist /etc/apache2/htpasswd
+# Copiar archivos de contraseñas
+COPY ./etc/apache2/.htpasswd /etc/apache2/.htpasswd
 
 # Habilitar los virtual hosts
 RUN a2ensite intranet.conf
