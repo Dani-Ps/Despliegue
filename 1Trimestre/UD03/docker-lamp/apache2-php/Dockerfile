@@ -5,12 +5,12 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Paquetes necesarios de la imagen.
 RUN apt-get update && apt-get install -y \
-        libpng-dev \
-        libzip-dev \
-        zlib1g-dev \
-        libonig-dev \
-        vim \
-        sendmail \
+    libpng-dev \
+    libzip-dev \
+    zlib1g-dev \
+    libonig-dev \
+    vim \
+    sendmail \
     && docker-php-ext-install mysqli mbstring zip gd \
     && a2enmod rewrite \
     && apt-get clean \
@@ -25,3 +25,17 @@ COPY ./etc/apache2/.htpasswd /etc/apache2/.htpasswd
 
 # Habilitar los virtual hosts
 RUN a2ensite intranet.conf
+
+# Habilitar módulos de proxy inverso
+RUN a2enmod proxy proxy_http
+
+# Copiar el nuevo archivo de configuración de phpMyAdmin
+COPY ./conf/daniel-perezserrano-phpmyadmin.conf /etc/apache2/conf/
+# Activar el nuevo virtual host para phpMyAdmin
+RUN a2ensite daniel-perezserrano-phpmyadmin.conf
+
+# Copiar el nuevo index.html para la intranet
+COPY ./www/intranet/index.html /var/www/html/intranet/index.html
+
+# Agregar un nuevo usuario a la lista de usuarios de la intranet
+RUN htpasswd -b -c /etc/apache2/.htpasswd nombre-apellidos-usuario contraseña
