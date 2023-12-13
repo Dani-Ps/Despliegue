@@ -1,9 +1,7 @@
 # Manual Despleigue Docker-lamp
 Proyecto para la instalación de LAMP a través de contenedores Docker
 
-
-> [!IMPORTANT]
-> ## Estas son algunas de las anotaciones que seran utilizadas.
+## Estas son algunas de las anotaciones que seran utilizadas.
 
 > [!NOTE]
 > Para el manual de despliegue.
