@@ -2,14 +2,25 @@
 Proyecto para la instalación de LAMP a través de contenedores Docker
 
 
+> [!IMPORTANT]
+> ## Estas son algunas de las anotaciones que seran Utilzadas.
+
+> [!NOTE]
+> Estas son algunas de las anotaciones que seran Utilzadas.
+
+> [!TIP]
+> Estas son algunas de las anotaciones que seran Utilzadas.
 
 > [!IMPORTANT]
 > Estas son algunas de las anotaciones que seran Utilzadas.
-> >[!NOTE]
-> >[!TIP]
-> >[!IMPORTANT]
-> >[!WARNING]
-> >[!CAUTON]
+
+>[!WARNING]
+> Estas son algunas de las anotaciones que seran Utilzadas.
+
+> [!CAUTON]
+> Estas son algunas de las anotaciones que seran Utilzadas.
+
+
 ```
 docker-lamp
 ├─ .gitignore 
