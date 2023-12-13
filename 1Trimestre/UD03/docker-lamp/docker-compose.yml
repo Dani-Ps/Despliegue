@@ -8,7 +8,8 @@ services:
             - "3307:3306"
         command: --default-authentication-plugin=mysql_native_password
         environment:
-            MYSQL_DATABASE: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}  # Utiliza MYSQL_DATABASE en lugar de MYSQL_ROOT_PASSWORD
+            MYSQL_USER: ${MYSQL_USER}          # Utiliza MYSQL_USER en lugar de MYSQL_ROOT_PASSWORD
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
         # Volumenes para que los datos de la base de datos persistan cuando se regenera el contenedor    
@@ -25,6 +26,7 @@ services:
         ports: 
             - "80:80"
             - "8060:8060"
+            - "443:443" 
         volumes:
             # Volumen para que los archivos de configuración de los sitios web publicado sean copiados del disco local a su ubicación correcta dentro del contenedor
             - ./apache2-php/www:/var/www/html
@@ -39,7 +41,7 @@ services:
         image: phpmyadmin/phpmyadmin
         container_name: daweb-docker-lamp-phpmyadmin
         ports:
-            - 8081:80
+            - 8080:80
         environment:
             MYSQL_USER: ${MYSQL_ROOT}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}

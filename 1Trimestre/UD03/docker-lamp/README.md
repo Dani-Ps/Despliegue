@@ -187,7 +187,11 @@ Lanzar el comando de generación de certificados de openssl:
 
 ```bash
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout www.key -out www.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout "C:\Users\danip\Desktop\docker-lamp\apache2-php\certs\www.key" -out "C:\Users\danip\Desktop\docker-lamp\apache2-php\certs\www.crt" -subj "/CN=www.local" -config "C:\Users\danip\Desktop\dev\CORE\apache\lounge\Apache24\conf\openssl.cnf"
+
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout intranet.key -out intranet.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout "C:\Users\danip\Desktop\docker-lamp\apache2-php\certs\intranet.key" -out "C:\Users\danip\Desktop\docker-lamp\apache2-php\certs\intranet.crt" -subj "/CN=intranet.local" -config "C:\Users\danip\Desktop\dev\CORE\apache\lounge\Apache24\conf\openssl.cnf"
+
 ```
 
 Este comando crea un certificado (crt) y una clave privada (key) válidos por 365 días.
@@ -246,3 +250,4 @@ Para acceder a las urls configuradas en los virtual host:
 - **PHP Info**: [https://www.local/phpinfo.php](https://www.local/phpinfo.php)
 - **Conexión a la Base de Datos**: [https://www.local/test-bd.php](https://www.localtest-bd.php)
 
+GJbmt*9T^zbsH%w6E) 
