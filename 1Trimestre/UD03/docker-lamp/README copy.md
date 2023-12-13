@@ -56,14 +56,14 @@ docker-lamp
 >La estructura del proyecto `docker-lamp` es un entorno de desarrollo LAMP (Linux, Apache, MySQL, PHP) utilizando Docker. A continuación, se describen cada parte de la estructura:
 > 
 >- **.gitignore**: Este archivo indica a Git qué archivos o carpetas ignorar en el control de versiones, como archivos de configuración personales o directorios de compilación. En este caso ignoraremos el archivo con las variables de entorno .env
-
+>
 >- **LICENSE**: Contiene información sobre la licencia bajo la cual se distribuye el proyecto, especificando cómo se puede usar o modificar.
-
+>
 >- **README.md**: Incluye información sobre el proyecto, como descripciones, instrucciones de instalación, uso y créditos.
-
+>
 >- **apache2-php/**: Esta carpeta contiene los archivos relacionados con el servidor web Apache y PHP.
-  - **certs/**: Contiene archivos de certificaciones ssl.
-  - **Dockerfile**: Script de instrucciones para construir la imagen Docker para el servidor Apache con PHP.
+>  - **certs/**: Contiene archivos de certificaciones ssl.
+>  - **Dockerfile**: Script de instrucciones para construir la imagen Docker para el servidor Apache con PHP.
  > - **conf/**: Contiene archivos de configuración para Apache.
  >   - **000-default.conf**: La configuración predeterminada del Virtual Host para Apache.
   >  - **intranet.conf**: La configuración del Virtual Host para la intranet, accesible en un puerto específico o subdominio.
@@ -74,16 +74,16 @@ docker-lamp
       >- **index.html**: Página de inicio para la intranet.
     >- **phpinfo.php**: Script PHP para mostrar información sobre la configuración de PHP.
    > - **test-bd.php**: Script PHP para probar la conexión a la base de datos MySQL.
-
+>
 >- **dist/**: Contiene plantillas o archivos distribuibles, en este caso una versión de ejemplo del archivo `.env`.
  > - **env.dist**: Una plantilla para el archivo de variables de entorno.
  > - **htpasswd.dist**: Una plantilla para con usuario de ejemplo inicial para acceder a la intranet
-
+>
 >- **docker-compose.yml**: Archivo YAML que define los servicios, redes y volúmenes para el proyecto, organizando y ejecutando múltiples contenedores Docker.
-
+>
 >- **docs/**: Directorio destinado a contener documentación del proyecto.
   >- **images/**: Imágenes utilizadas en la documentación.
-
+>
 >- **mysql/**: Contiene configuraciones y datos relacionados con el servicio de base de datos MySQL.
  > - **conf/**: Directorio para archivos de configuración personalizados de MySQL.
  > - **dump/**: Contiene archivos de carga de bases de datos, como scripts SQL para inicializar la base de datos.
