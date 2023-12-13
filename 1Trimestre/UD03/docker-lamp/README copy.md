@@ -66,16 +66,16 @@ docker-lamp
 >  - **Dockerfile**: Script de instrucciones para construir la imagen Docker para el servidor Apache con PHP.
  > - **conf/**: Contiene archivos de configuración para Apache.
  >   - **000-default.conf**: La configuración predeterminada del Virtual Host para Apache.
-  >  - **intranet.conf**: La configuración del Virtual Host para la intranet, accesible en un puerto específico o subdominio.
+ >   - **intranet.conf**: La configuración del Virtual Host para la intranet, accesible en un puerto específico o subdominio.
  > - **etc/apache2/**: Contiene archivos de configuración adicionales para el directorio apache2.
 > - **www/**: Directorio que almacena los archivos del sitio web.
-   > - **index.html**: Página de inicio para el sitio principal.
-    >- **intranet/**: Carpeta que contiene los archivos para la sección de intranet del sitio.
-      >- **index.html**: Página de inicio para la intranet.
-    >- **phpinfo.php**: Script PHP para mostrar información sobre la configuración de PHP.
-   > - **test-bd.php**: Script PHP para probar la conexión a la base de datos MySQL.
+>     - **index.html**: Página de inicio para el sitio principal.
+>     - **intranet/**: Carpeta que contiene los archivos para la sección de intranet del sitio.
+>         - **index.html**: Página de inicio para la intranet.
+>     - **phpinfo.php**: Script PHP para mostrar información sobre la configuración de PHP.
+>     - **test-bd.php**: Script PHP para probar la conexión a la base de datos MySQL.
 >
->- **dist/**: Contiene plantillas o archivos distribuibles, en este caso una versión de ejemplo del archivo `.env`.
+> - **dist/**: Contiene plantillas o archivos distribuibles, en este caso una versión de ejemplo del archivo `.env`.
  > - **env.dist**: Una plantilla para el archivo de variables de entorno.
  > - **htpasswd.dist**: Una plantilla para con usuario de ejemplo inicial para acceder a la intranet
 >
@@ -89,8 +89,8 @@ docker-lamp
  > - **dump/**: Contiene archivos de carga de bases de datos, como scripts SQL para inicializar la base de datos.
    > - **myDb.sql**: Un script SQL con lo necesario para inicializar la base de datos.
 
-
-# Guía de Instalación del Proyecto Docker LAMP
+> [!TIP]
+> # Guía de Instalación del Proyecto Docker LAMP
 
 Esta guía detalla los pasos para clonar y configurar un entorno Docker LAMP (Linux, Apache, MySQL, PHP) con Virtual Hosts.
 
@@ -212,9 +212,3 @@ RUN a2ensite daniel-perezserrano-phpmyadmin.conf
 
 ![](./images/dockerfile-new-php-conf.png)
 
-
-> [!NOTE]
-> [!TIP]
-> [!IMPORTANT]
-> [!WARNING]
-> [!CAUTON]
