@@ -1,6 +1,15 @@
 # Manual Despleigue Docker-lamp
 Proyecto para la instalación de LAMP a través de contenedores Docker
 
+
+
+> [!IMPORTANT]
+> Estas son algunas de las anotaciones que seran Utilzadas.
+> >[!NOTE]
+> >[!TIP]
+> >[!IMPORTANT]
+> >[!WARNING]
+> >[!CAUTON]
 ```
 docker-lamp
 ├─ .gitignore 
@@ -31,21 +40,22 @@ docker-lamp
       └─ myDb.sql
 
 ```
-## Descripcion de la estructura del proyecto: 
+> [!NOTE]
+>## Descripcion de la estructura del proyecto: 
+>
+>
+>La estructura del proyecto `docker-lamp` es un entorno de desarrollo LAMP (Linux, Apache, MySQL, PHP) utilizando Docker. A continuación, se describen cada parte de la estructura:
+> 
+>- **.gitignore**: Este archivo indica a Git qué archivos o carpetas ignorar en el control de versiones, como archivos de configuración personales o directorios de compilación. En este caso ignoraremos el archivo con las variables de entorno .env
 
+>- **LICENSE**: Contiene información sobre la licencia bajo la cual se distribuye el proyecto, especificando cómo se puede usar o modificar.
 
-La estructura del proyecto `docker-lamp` es un entorno de desarrollo LAMP (Linux, Apache, MySQL, PHP) utilizando Docker. A continuación, se describen cada parte de la estructura:
+>- **README.md**: Incluye información sobre el proyecto, como descripciones, instrucciones de instalación, uso y créditos.
 
-- **.gitignore**: Este archivo indica a Git qué archivos o carpetas ignorar en el control de versiones, como archivos de configuración personales o directorios de compilación. En este caso ignoraremos el archivo con las variables de entorno .env
-
-- **LICENSE**: Contiene información sobre la licencia bajo la cual se distribuye el proyecto, especificando cómo se puede usar o modificar.
-
-- **README.md**: Incluye información sobre el proyecto, como descripciones, instrucciones de instalación, uso y créditos.
-
-- **apache2-php/**: Esta carpeta contiene los archivos relacionados con el servidor web Apache y PHP.
+>- **apache2-php/**: Esta carpeta contiene los archivos relacionados con el servidor web Apache y PHP.
   - **certs/**: Contiene archivos de certificaciones ssl.
   - **Dockerfile**: Script de instrucciones para construir la imagen Docker para el servidor Apache con PHP.
-  - **conf/**: Contiene archivos de configuración para Apache.
+ >> - **conf/**: Contiene archivos de configuración para Apache.
     - **000-default.conf**: La configuración predeterminada del Virtual Host para Apache.
     - **intranet.conf**: La configuración del Virtual Host para la intranet, accesible en un puerto específico o subdominio.
   - **etc/apache2/**: Contiene archivos de configuración adicionales para el directorio apache2.
@@ -134,7 +144,7 @@ Construir las imágenes usando Docker Compose:
 docker-compose build
 ```
 
-![](./images/)
+![](./images/build.png)
 
 ## Iniciar los Contenedores
 
@@ -143,6 +153,59 @@ Arrancar los contenedores en modo detached:
 ```bash
 docker-compose up -d
 ```
+![](./images/up.png)
 
 ## Parte 1 (VIRTUAL HOST)
-### Título terciario
+
+
+### A) Modificar el nombre del virtualhost de la intranet y de local con nombre-apellido-x.local
+
+> En la carpeta ./docker-lamp/apache2-php/conf
+> > En el archivo 000-dafault.conf:
+> > >![](./images/local-servername.png)
+> > En el archivo intranet.conf:
+> > >![](./images/intranet-servername.png)
+
+### B) Crear un nuevo virtual host para el servicio phpmyadmin. Este deberá estar configurado con el nombre nombre-apellidos-phpmyadmin.local:8081 y debe ser solo accesible por los mismos usuarios que pueden acceder a la intranet.
+
+> En la carpeta ./docker-lamp/apache2-php/conf
+> > Creamos el archivo en cuestion con el nombre: nombre-apellidos-phpmyadmin.conf
+> > Instrucciones de configuración:
+> >- Configurar el puerto la escucha por el puerto 8081
+> >- Tener la misma configuración de autenticación que la intranet, pero en este caso en vez de estar dentro de <Directory> debe estar dentro de la etiqueta <location /> ya que se va a configurar un proxy inverso para redirigir.
+> >- Después de cerrar la etiqueta </Location> se tiene que incluir la configuración del > >proxy inverso que redirija todas las peticiones al servicio de phpmyadmin desplegado. Hay > >que agregar las siguientes líneas:
+
+```
+ProxyPreserveHost On
+ProxyPass / http://phpmyadmin:80/
+ProxyPassReverse / http://phpmyadmin:80/
+```
+![](./images/new-php-vh.png)
+
+### C)  Habilitar los módulos de proxy inverso en el Dockerfile de la imágen de apache. Estos módulos son: proxy proxy_http.
+
+Para ello en el _Dockerfile_ añadimos las siguientes líneas:
+```
+&& a2enmod proxy \
+&& a2enmod proxy_http \
+```
+
+![](./images/dockerfile-new-php-conf.png)
+
+### D) Por último no olvidar activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf en el Dockerfile del fichero apache.
+
+Para ello en el _Dockerfile_ añadimos las siguientes líneas:
+```
+# Activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf
+RUN a2ensite daniel-perezserrano-phpmyadmin.conf
+
+```
+
+![](./images/dockerfile-new-php-conf.png)
+
+
+> [!NOTE]
+> [!TIP]
+> [!IMPORTANT]
+> [!WARNING]
+> [!CAUTON]
