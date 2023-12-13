@@ -91,9 +91,9 @@ docker-lamp
 
 > [!TIP]
 > # Guía de Instalación del Proyecto Docker LAMP
-
-Esta guía detalla los pasos para clonar y configurar un entorno Docker LAMP (Linux, Apache, MySQL, PHP) con Virtual Hosts.
-
+>
+>Esta guía detalla los pasos para clonar y configurar un entorno Docker LAMP (Linux, Apache, MySQL, PHP) con Virtual Hosts.
+>
 ## Clonar el Repositorio
 
 Primero, clonar el repositorio Git:
