@@ -197,12 +197,16 @@ COPY ./etc/apache2/.htpasswd /etc/apache2/.htpasswd
 
 ![](./images/c-test-bd.png)
 
->- **Prueba de phpmyadmin**: [http://localhost:8080 (con el usuario root y la contraseña >establecida)](http://localhost:8080)
+>- **Prueba de phpmyadmin**: [http://localhost:8080 (con el usuario root y la contraseña establecida)](http://localhost:8080)
 
 ![](./images/c-php.png)
 
+Una vez dentro:
+
+![](./images/c-php02.png)
+
 ## Iniciar los Contenedores
-[!TIP]
+
 Arrancar los contenedores en modo detached `-d`:
   ```bash
  docker-compose up -d
@@ -214,16 +218,16 @@ Arrancar los contenedores en modo detached `-d`:
 
 
 ### A) Modificar el nombre del virtualhost de la intranet y de local con nombre-apellido-x.local
-> [!NOTE]
->> En la carpeta `./docker-lamp/apache2-php/conf`
->> > En el archivo `000-dafault.conf`:
-> 
->![](./images/local-servername.png)
->
->> > En el archivo `intranet.conf`:
->
-> 
->![](./images/intranet-servername.png)
+
+ En la carpeta `./docker-lamp/apache2-php/conf` 
+
+> En el archivo `000-dafault.conf`: 
+
+![](./images/local-servername.png)
+
+> En el archivo `intranet.conf`:
+
+![](./images/intranet-servername.png)
 
 ### B) Crear un nuevo virtual host para el servicio phpmyadmin. Este deberá estar configurado con el nombre nombre-apellidos-phpmyadmin.local:8081 y debe ser solo accesible por los mismos usuarios que pueden acceder a la intranet.
 > [!NOTE]
@@ -358,7 +362,7 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
 
 
   >#### 5. Comprobar que se ha instalado adecuadamente:
-  
+
    Automaticamente nos redirije a  **`wp-login.php`**, introducimos el nombre de usuario y la contraseña. Y se nos abrirá la siguiente ventana: 
 
   ![](./images/c-wp-installed.png)
