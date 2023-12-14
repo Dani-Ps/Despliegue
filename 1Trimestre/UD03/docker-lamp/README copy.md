@@ -220,18 +220,43 @@ ProxyPassReverse / http://phpmyadmin:80/
 ```
 ![](./images/new-php-vh.png)
 
-### C)  Habilitar los módulos de proxy inverso en el Dockerfile de la imágen de apache, estos módulos son: proxy proxy_http. Y activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf en el Dockerfile del fichero apache.
-> [!IMPORTANT]
->> Para ello en el _**Dockerfile**_ añadimos las siguientes líneas:
+>### Habilitar los módulos de proxy inverso en el Dockerfile de la imágen de apache, estos módulos >son: proxy proxy_http. Y activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf >en el Dockerfile del fichero apache.
+>> [!IMPORTANT]
+>>> Para ello en el _**Dockerfile**_ añadimos las siguientes líneas:
+>
+ >  ```
+ > && a2enmod proxy \
+  > && a2enmod proxy_http \
+>
+ >   # Activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf
+>   RUN a2ensite daniel-perezserrano-phpmyadmin.conf
+>   ```
+ >  ![](./images/dockerfile-new-php-conf.png)
+>
 
-   ```
-  && a2enmod proxy \
-   && a2enmod proxy_http \
+### C) Modifica el index.html de la intranet para que tenga otra apariencia distinta a la página por defecto, puede ser cualquier plantilla html "copyleft o free" que encuentres por internet.
+> [!NOTE]
+> Añadir a la carpeta  `apache2-php\www\intranet ` los archivos de la web que queramos alojar:
 
-    # Activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf
-    RUN a2ensite daniel-perezserrano-phpmyadmin.conf
-   ```
-   ![](./images/dockerfile-new-php-conf.png)
+![](./images/add-intranet-new-index.png)
+
+>[!IMPORTANT]
+> Modifica el `_**Dockerfile**_` para que copie los archivos al directorio `/var/www/html/intranet` del contenedor
+
+```bash
+# Copiar el nuevo index.html para la intranet
+COPY ./www/intranet/index.html /var/www/html/intranet/index.html
+COPY ./www/intranet/assets /var/www/html/intranet/assets
+COPY ./www/intranet/images /var/www/html/intranet/images
+```
+
+Comprueba que todo ha funcionado correctamente ingresando en la intranet:
+
+![](./images/c-intrane03.png)
+
+
+
+
 
 ## Parte 2 (CERTIFICADOS SSL)
 
