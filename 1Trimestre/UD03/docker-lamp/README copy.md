@@ -194,26 +194,26 @@ Arrancar los contenedores en modo detached `-d`:
 
 ### A) Modificar el nombre del virtualhost de la intranet y de local con nombre-apellido-x.local
 > [!NOTE]
->> En la carpeta ./docker-lamp/apache2-php/conf
->> > En el archivo 000-dafault.conf:
+>> En la carpeta `./docker-lamp/apache2-php/conf`
+>> > En el archivo `000-dafault.conf`:
 > 
 >![](./images/local-servername.png)
 >
->> > En el archivo intranet.conf:
+>> > En el archivo `intranet.conf`:
 >
 > 
 >![](./images/intranet-servername.png)
 
 ### B) Crear un nuevo virtual host para el servicio phpmyadmin. Este deberá estar configurado con el nombre nombre-apellidos-phpmyadmin.local:8081 y debe ser solo accesible por los mismos usuarios que pueden acceder a la intranet.
 > [!NOTE]
->> En la carpeta ./docker-lamp/apache2-php/conf
->> > Creamos el archivo en cuestion con el nombre: nombre-apellidos-phpmyadmin.conf
+>> En la carpeta `./docker-lamp/apache2-php/conf`
+>> > Creamos el archivo en cuestion con el nombre: `nombre-apellidos-phpmyadmin.conf`
 >> > Instrucciones de configuración:
 >> >- Configurar el puerto la escucha por el puerto 8081
 >> >- Tener la misma configuración de autenticación que la intranet, pero en este caso en vez de estar dentro de <Directory> debe estar dentro de la etiqueta <location /> ya que se va a configurar un proxy inverso para redirigir.
 >> >- Después de cerrar la etiqueta </Location> se tiene que incluir la configuración del > >proxy inverso que redirija todas las peticiones al servicio de phpmyadmin desplegado. Hay > >que agregar las siguientes líneas:
 
-```
+```bash
 ProxyPreserveHost On
 ProxyPass / http://phpmyadmin:80/
 ProxyPassReverse / http://phpmyadmin:80/
@@ -224,7 +224,7 @@ ProxyPassReverse / http://phpmyadmin:80/
 >> [!IMPORTANT]
 >>> Para ello en el _**Dockerfile**_ añadimos las siguientes líneas:
 >
- >  ```
+ >  ```bash
  > && a2enmod proxy \
   > && a2enmod proxy_http \
 >
@@ -264,7 +264,7 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
 >[!WARNING]
 >>Hay que modificar el fichero `/etc/hosts` del sistema operativo anfitrión (no el contenedor de >>docker) y añadir las siguientes líneas:
 
-```
+```bash
 127.0.0.1	www.local
 127.0.0.1	intranet.local
 ```
@@ -313,7 +313,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout intranet.key -out in
 
 >> Editar el archivo `000-default.conf` estableciendo los siguientes valores:
 
-   ```
+  ```bash
   <VirtualHost *:443>
    ServerName www.local
     SSLEngine on
@@ -324,7 +324,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout intranet.key -out in
 
 >> Editar el archivo `intranet.conf` estableciendo los siguientes valores:
 
-   ```
+  ```bash
    <VirtualHost *:443>
    ServerName intranet.local
     SSLEngine on
@@ -338,13 +338,13 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout intranet.key -out in
 >En el archivo  _**Dockerfile**_ del directorio  `./apache2-php ` se deben copiar los certificados generados, para ello añade la siguiente línea:
 
 
-```
+```bash
 # Copiar archivos de contraseñas
 COPY ./certs /etc/apache2/ssl
 ```
 >Además se debe habilitar el módulo ssl, para ello agregar la siguiente línea:
 
-```
+```bash
 RUN a2enmod ssl
 ```
 
