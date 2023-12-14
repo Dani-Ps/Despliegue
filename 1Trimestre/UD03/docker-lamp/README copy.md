@@ -118,7 +118,7 @@ Esta guía detalla los pasos para clonar y configurar un entorno Docker LAMP (Li
 > [!CAUTION]
 > Editar el archivo .env estableciendo los siguientes valores:
 
-  ```
+  ```bash
    MYSQL_DATABASE=dbname
    MYSQL_USER=root
    MYSQL_PASSWORD=test
@@ -147,6 +147,20 @@ Copiar el archivo **htpasswd.dist** a `./apache2-php/etc/apache2/` y añade usua
 
 ![](./images/create-user.png)
 
+Una vez generada copiamos el usuario:contrasña en el adchivo `.htpasswd`:
+
+![](./images/adding-2-user.png)
+
+>[!WARNIG]
+> Modificar el archivo _**Dockerfile**_ para que copie los `USUARIO:CONTRASEÑA` en el directorio del contenedor `/etc/apache2/`
+>
+> Asegurate de tner la siguiente línea en el _**Dockerfile**: 
+
+  ```bash
+COPY ./etc/apache2/.htpasswd /etc/apache2/.htpasswd
+
+ ```
+
 ## Construir las Imágenes
 >[!TIP]
 >Construir las imágenes usando Docker Compose:
@@ -156,20 +170,6 @@ Copiar el archivo **htpasswd.dist** a `./apache2-php/etc/apache2/` y añade usua
 
 
 ![](./images/build.png)
-
- ## Comprobaciones de Prueba
- ### Creación de un usuario adicional para acceder a la intranet:
-> [!TIP]
-> Para acceder a al intranet se necesita crear un archivo .htpasswd con los nombres de usuario y > sus contraseñas. Se puede usar la herramienta htpasswd para esto. Para ello accede al >contenedor daweb-docker-lamp-apache2 a través del terminal mediante el siguiente comando:
-
- ```
- docker exec -it daweb-docker-lamp-apache2
- ```
-
-> Lanzar el comando que crea un usuario llamado usuario2 y pedirá que se introduzca una contraseña:
- ```
- htpasswd /etc/apache2/.htpasswd usuario2
- ```
 
 ### Prueba de los servicios:
 >[!IMPORTANT]
@@ -220,11 +220,12 @@ ProxyPassReverse / http://phpmyadmin:80/
 ```
 ![](./images/new-php-vh.png)
 
->### Habilitar los módulos de proxy inverso en el Dockerfile de la imágen de apache, estos módulos son: proxy proxy_http. Y activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf en el Dockerfile del fichero apache.
+ ### Habilitar los módulos de proxy inverso en el Dockerfile de la imágen de apache, estos módulos son: proxy proxy_http. Y activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf en el Dockerfile del fichero apache.
 
->> [!IMPORTANT]
+> [!IMPORTANT]
 >>> Para ello en el _**Dockerfile**_ añadimos las siguientes líneas:
 >
+
  >  ```bash
  > && a2enmod proxy \
   > && a2enmod proxy_http \
@@ -254,6 +255,35 @@ COPY ./www/intranet/images /var/www/html/intranet/images
 Comprueba que todo ha funcionado correctamente ingresando en la intranet:
 
 ![](./images/c-intrane03.png)
+
+
+### D) Añade un nuevo usuario con el formato nombre-apellidos a la lista de usuarios que puede acceder a la intranet.
+
+> [!TIP]
+> Para acceder a al intranet se necesita crear un archivo .htpasswd con los nombres de usuario y sus contraseñas. Se puede usar la herramienta htpasswd para esto. Para ello accede al contenedor daweb-docker-lamp-apache2 a través del terminal mediante el siguiente comando:
+
+ ```bash
+ docker exec -it daweb-docker-lamp-apache2
+ ```
+>> O bien a traves de la interfaz de docker: 
+
+![](./images/exex.png)
+
+> Lanzar el comando que crea un usuario llamado usuario2 y pedirá que se introduzca una contraseña:
+
+ ```bash
+ htpasswd /etc/apache2/.htpasswd usuario2
+ ```
+![](./images/add-intranet-user.png)
+
+### E) En el sitio principal realiza la instalación de un CMS Wordpress.
+
+
+
+
+
+
+
 
 
 
