@@ -1,5 +1,4 @@
 # Manual Despleigue Docker-lamp
-Proyecto para la instalación de LAMP a través de contenedores Docker
 
 ## Índice de anotaciones.
 
@@ -18,6 +17,8 @@ Proyecto para la instalación de LAMP a través de contenedores Docker
 > [!CAUTION]
 > Para tener precaución en un punto concreto.
 
+## Proyecto para la instalación de LAMP a través de contenedores Docker
+### Estrucuctura del poroyecto:
 
 ```
 docker-lamp
@@ -171,7 +172,28 @@ docker-lamp
 > 
 >![](./images/build.png)
 >
+> ## Comprobaciones de Prueba
 > 
+> ### Creación de un usuario adicional para acceder a la intranet:
+> Para acceder a al intranet se necesita crear un archivo .htpasswd con los nombres de usuario y > sus contraseñas. Se puede usar la herramienta htpasswd para esto. Para ello accede al >contenedor daweb-docker-lamp-apache2 a través del terminal mediante el siguiente comando:
+> 
+> ```
+> docker exec -it daweb-docker-lamp-apache2
+> ```
+> 
+> Lanzar el comando que crea un usuario llamado usuario2 y pedirá que se introduzca una contraseña:
+> ```
+> htpasswd /etc/apache2/.htpasswd usuario2
+> ```
+> 
+### Prueba de los servicios:
+ Para probar si los servicios están funcionando correctamente, acceder a los siguientes enlaces a través del navegador:
+- **Prueba del sitio principal**: [http://localhost](http://localhost)
+- **Prueba de la intranet**: [http://localhost:8060 (usando usuario1 y contraseña:123456789 o >  el usuario creado en el paso anterior)](http://localhost:8060)
+- **Prueba de PHP Info**: [http://localhost/phpinfo.php](http://localhost/phpinfo.php)
+- **Prueba de Conexión a la Base de Datos**: [http://localhost/test-bd.php](http://localhost/test-bd.php)
+- **Prueba de phpmyadmin**: [http://localhost:8080 (con el usuario root y la contraseña establecida)](http://localhost:8080)
+
 >## Iniciar los Contenedores
 >
 >Arrancar los contenedores en modo detached:
@@ -267,5 +289,46 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout intranet.key -out in
 >Para Common Name (Introducir el nombre del dominio www.local, intranet.local).
 
 #### Configurar Virtual Host 443
+> [!NOTE]
+>En cada archivo de configuración agregar una regla como esta replicando la configuración >adicional de la ya existente:
+
+> [!CAUTION]
+> Editar el archivo `000-default.conf` estableciendo los siguientes valores:
+>
+>   ```
+>   <VirtualHost *:443>
+>   ServerName www.local
+>    SSLEngine on
+>    SSLCertificateFile /etc/apache2/ssl/www.local.crt
+>    SSLCertificateKeyFile /etc/apache2/ssl/www.local.key
+>    </VirtualHost>
+> ```
+>
+> Editar el archivo `intranet.conf` estableciendo los siguientes valores:
+>
+>   ```
+>   <VirtualHost *:443>
+>   ServerName intranet.local
+>    SSLEngine on
+>    SSLCertificateFile /etc/apache2/ssl/intranet.local.crt
+>    SSLCertificateKeyFile /etc/apache2/ssl/intranet.local.key
+>    </VirtualHost>
+> ```
+
+#### Habilitar el módulo mod_ssl
+
+En el archivo  `_**Dockerfile**_` del directorio  `./apache2-php ` se deben copiar los certificados generados, para ello añade la siguiente línea:
+> [!IMPORTANT]
+>
+>```
+># Copiar archivos de contraseñas
+>COPY ./certs /etc/apache2/ssl
+>```
+>
+>Además se debe habilitar el módulo ssl, para ello agregar la siguiente línea:
+>
+>```
+>RUN a2enmod ssl
+>```
 
  
