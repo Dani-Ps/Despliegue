@@ -311,22 +311,35 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
   > [!TIP]
   >En el directorio de **wordpress** esta el archivo **`readme.html`**, en el cual se detallan los pasos de la instalación.
 
-  
+
   >> En el navegador en nuestro local (www.local) abrimos el siguiente archivo que está en el directorio de wordpress: `wp-admin/install.php`
   ```bash
    # Quedaria así la url: 
    www.local/wp-admin/install.php
    ```
-
-
+ >> Y esto es lo que nos mostraría:
 
 ![](./images/1-step-cms.png)
+
+  > 4. Seguimos los pasos del instalador, rellenamos los datos e instalamos: 
+
+  >> - Primero deberemos conectarnos a la base de datos previamente creada
+  >> - Una vez nos conectemos nos creará el contenido que debe ir en el fichero de configuración **`wp-config.php`**.
+  >>>Creamos el fichero en directorio de **wordpress** y copiamos el contenido. 
+  >>> Una vez hecho esto y guardado el fichero volvemos al navegador y le damos a **Run the instalation.**
+
+  ![](./images/conection-wp-done.png)
+
+  >> - Segundo rellenamos los datos de la web y personales y le damos a Install **Worspress**
+
+
 ![](./images/2-step-cms.png)
-![](./images/add-wp-bd-byps.png)
-![](./images/add-wp-bd-user.png)
 
 
-![](./images/login-data-wp.png)
+  > 5. Comprobar que se ha instalado adecuadamente: 
+
+  ![](./images/c-wp-installed.png)
+
 
 
 
