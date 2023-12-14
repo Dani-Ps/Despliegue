@@ -174,11 +174,32 @@ COPY ./etc/apache2/.htpasswd /etc/apache2/.htpasswd
 ### Prueba de los servicios:
 >[!IMPORTANT]
 >Para probar si los servicios están funcionando correctamente, acceder a los siguientes enlaces a >través del navegador:
+
+
 >- **Prueba del sitio principal**: [http://localhost](http://localhost)
+
+![](./images/c-localhost].png)
+
 >- **Prueba de la intranet**: [http://localhost:8060 (usando usuario1 y contraseña:123456789 o >  >el usuario creado en el paso anterior)](http://localhost:8060)
+
+>[!WARNING]
+> Al ingresar en el enlace de la intranet te pedirá el usuario y la contraseña
+
+![](./images/c-intrane01.png)
+
+![](./images/c-intrane02.png)
+
 >- **Prueba de PHP Info**: [http://localhost/phpinfo.php](http://localhost/phpinfo.php)
+
+![](./images/c-phpinfo.png)
+
 >- **Prueba de Conexión a la Base de Datos**: [http://localhost/test-bd.php](http://localhost/test-bd.php)
+
+![](./images/c-test-bd.png)
+
 >- **Prueba de phpmyadmin**: [http://localhost:8080 (con el usuario root y la contraseña >establecida)](http://localhost:8080)
+
+![](./images/c-php.png)
 
 ## Iniciar los Contenedores
 [!TIP]
@@ -211,7 +232,7 @@ Arrancar los contenedores en modo detached `-d`:
 >> > Instrucciones de configuración:
 >> >- Configurar el puerto la escucha por el puerto 8081
 >> >- Tener la misma configuración de autenticación que la intranet, pero en este caso en vez de estar dentro de <Directory> debe estar dentro de la etiqueta <location /> ya que se va a configurar un proxy inverso para redirigir.
->> >- Después de cerrar la etiqueta </Location> se tiene que incluir la configuración del > >proxy inverso que redirija todas las peticiones al servicio de phpmyadmin desplegado. Hay > >que agregar las siguientes líneas:
+>> >- Después de cerrar la etiqueta </Location> se tiene que incluir la configuración del proxy inverso que redirija todas las peticiones al servicio de phpmyadmin desplegado. Hay que agregar las siguientes líneas:
 
 ```bash
 ProxyPreserveHost On
@@ -223,7 +244,7 @@ ProxyPassReverse / http://phpmyadmin:80/
  ### Habilitar los módulos de proxy inverso en el Dockerfile de la imágen de apache, estos módulos son: proxy proxy_http. Y activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf en el Dockerfile del fichero apache.
 
 > [!IMPORTANT]
->>> Para ello en el _**Dockerfile**_ añadimos las siguientes líneas:
+>Para ello en el _**Dockerfile**_ añadimos las siguientes líneas:
 >
 
  >  ```bash
@@ -265,7 +286,7 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
  ```bash
  docker exec -it daweb-docker-lamp-apache2
  ```
->> O bien a traves de la interfaz de docker: 
+>> **O bien a traves de la interfaz de docker:**
 
 ![](./images/exex.png)
 
@@ -279,7 +300,7 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
 ### E) En el sitio principal realiza la instalación de un CMS Wordpress.
 
   Pasos: 
-  > 1. Descargar y extraer el directorio wordpress en la siguiente dirección: `apache2-php\www\intranet `
+  >#### 1. Descargar y extraer el directorio wordpress en la siguiente dirección: `apache2-php\www\intranet `
     >  > [!Enlace de descarga](https://wordpress.org/download/)
 
     ![](./images/wp-directori.png)
@@ -298,15 +319,15 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
    ![](./images/DescargarWordPress.png)
 
 
-  > 2. Creamos una base de datos para el wordpress: 
+  >#### 2. Creamos una base de datos para el wordpress: 
 
   > [!IMPORTANT]
-  > Este paso es muy importante sino no podremos comenzar con la instalación del CMS
+  > Este paso es esencial, sino se realiza no podremos comenzar con la instalación del CMS.
 
 ![](./images/add-wp-bd.png)
 
   
-  > 3. Comenzamos la instalación: 
+  >#### 3. Comenzamos la instalación: 
 
   > [!TIP]
   >En el directorio de **wordpress** esta el archivo **`readme.html`**, en el cual se detallan los pasos de la instalación.
@@ -321,35 +342,26 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
 
 ![](./images/1-step-cms.png)
 
-  > 4. Seguimos los pasos del instalador, rellenamos los datos e instalamos: 
+  >#### 4. Seguimos los pasos del instalador, rellenamos los datos e instalamos: 
 
   >> - Primero deberemos conectarnos a la base de datos previamente creada
-  >> - Una vez nos conectemos nos creará el contenido que debe ir en el fichero de configuración **`wp-config.php`**.
+  >> - Segundo, una vez nos conectemos nos creará el contenido que debe ir en el fichero de configuración **`wp-config.php`**.
   >>>Creamos el fichero en directorio de **wordpress** y copiamos el contenido. 
   >>> Una vez hecho esto y guardado el fichero volvemos al navegador y le damos a **Run the instalation.**
 
   ![](./images/conection-wp-done.png)
 
-  >> - Segundo rellenamos los datos de la web y personales y le damos a Install **Worspress**
+  >> - Tercero rellenamos los datos de la web y personales y le damos a Install **Worspress**
 
 
 ![](./images/2-step-cms.png)
 
 
-  > 5. Comprobar que se ha instalado adecuadamente: 
+  >#### 5. Comprobar que se ha instalado adecuadamente:
+  
+   Automaticamente nos redirije a  **`wp-login.php`**, introducimos el nombre de usuario y la contraseña. Y se nos abrirá la siguiente ventana: 
 
   ![](./images/c-wp-installed.png)
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Parte 2 (CERTIFICADOS SSL)
@@ -377,7 +389,7 @@ cd certs
 Lanzar el comando de generación de certificados de openssl:
 >[!WARNING]
 >**ANTES DE LANZAR EL COMANDO**
->>Asegurate de tener el fichero de  `openssl.conf` en la dirección: `C:\Apache24\conf`
+>Asegurate de tener el fichero de  `openssl.conf` en la dirección: `C:\Apache24\conf`
 >
 ```bash
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout www.key -out www.crt
@@ -388,22 +400,29 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout intranet.key -out in
 > [!NOTE]
 > 
 >Este comando crea un certificado (crt) y una clave privada (key) válidos por 365 días.
-> >- x509: Especifica que quieres generar un certificado autofirmado.
-> >- nodes: Crea una clave sin contraseña.
-> >- days 365: El certificado será válido por 365 días.
-> >- newkey rsa:2048: Crea una nueva clave de 2048 bits.
-> >- keyout: El nombre del archivo para la clave privada (normalmente será el nombre del dominio)
-> >- out: El nombre del archivo para el certificado (normalmente será el nombre del dominio)
+> - x509: Especifica que quieres generar un certificado autofirmado.
+> - nodes: Crea una clave sin contraseña.
+> - days 365: El certificado será válido por 365 días.
+> - newkey rsa:2048: Crea una nueva clave de 2048 bits.
+> - keyout: El nombre del archivo para la clave privada (normalmente será el nombre del dominio)
+> - out: El nombre del archivo para el certificado (normalmente será el nombre del dominio)
 
 > [!IMPORTANT]
->>Durante el proceso, se piden detalles como país, estado, organización, etc. 
+>Durante el proceso, se piden detalles como país, estado, organización, etc. 
 > 
->>Para Common Name (Introducir el nombre del dominio www.local, intranet.local).
+>Para Common Name (Introducir el nombre del dominio www.local, intranet.local).
+>
+
+Una vez creados copialos al contenedor de apache2-php, editando el _**Dockerfile**_ con el siguiente comando: 
+
+```bash
+# Copiar archivos de contraseñas
+COPY ./certs /etc/apache2/ssl
+```
 
 #### Configurar Virtual Host 443
 > [!CAUTION]
->En cada archivo de configuración agregar una regla como esta replicando la configuración >adicional de la ya existente:
-
+>En cada archivo de configuración agregar una regla como esta replicando la configuración adicional de la ya existente:
 
 >> Editar el archivo `000-default.conf` estableciendo los siguientes valores:
 
@@ -428,18 +447,19 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout intranet.key -out in
  ```
 
 #### Habilitar el módulo mod_ssl
-> [!IMPORTANT]
->En el archivo  _**Dockerfile**_ del directorio  `./apache2-php ` se deben copiar los certificados generados, para ello añade la siguiente línea:
 
-
-```bash
-# Copiar archivos de contraseñas
-COPY ./certs /etc/apache2/ssl
-```
->Además se debe habilitar el módulo ssl, para ello agregar la siguiente línea:
+Edita el el _**Dockerfile**_ con el siguiente comando: 
 
 ```bash
 RUN a2enmod ssl
 ```
+#### Comprobamos en el navegador
 
- 
+- **Sitio Principal**: [https://www.local](https://www.local)
+
+![](./images/cert-local.png)
+
+- **Intranet**: [https://intranet.local](https://intranet.local)
+
+![](./images/intranet-cert.png)
+
