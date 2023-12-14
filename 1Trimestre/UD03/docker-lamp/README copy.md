@@ -299,8 +299,9 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
 
 
   > 2. Creamos una base de datos para el wordpress: 
-    > [!IMPORTANT]
-    > Este paso es muy importante sino no podremos comenzar con la instalación del CMS
+
+  > [!IMPORTANT]
+  > Este paso es muy importante sino no podremos comenzar con la instalación del CMS
 
 ![](./images/add-wp-bd.png)
 
@@ -308,7 +309,9 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
   > 3. Comenzamos la instalación: 
 
   > [!TIP]
-    > En el directorio de **wordpress** esta el archivo **`readme.html`**, en el cual se detallan los pasos de la instalación.
+  >En el directorio de **wordpress** esta el archivo **`readme.html`**, en el cual se detallan los pasos de la instalación.
+
+  
   >> En el navegador en nuestro local (www.local) abrimos el siguiente archivo que está en el directorio de wordpress: `wp-admin/install.php`
   ```bash
    # Quedaria así la url: 
