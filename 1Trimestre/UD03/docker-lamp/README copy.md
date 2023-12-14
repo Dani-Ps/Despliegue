@@ -92,33 +92,32 @@ docker-lamp
 
 
  # Guía de Instalación del Proyecto Docker LAMP
+
+Esta guía detalla los pasos para clonar y configurar un entorno Docker LAMP (Linux, Apache, MySQL, PHP) con Virtual Hosts.
+
+## Clonar el Repositorio
 > [!TIP]
->Esta guía detalla los pasos para clonar y configurar un entorno Docker LAMP (Linux, Apache, MySQL, PHP) con Virtual Hosts.
->
->## Clonar el Repositorio
->
 >Primero, clonar el repositorio Git:
 >
 >   ```bash
 >   git clone [https://github.com/antonio-gabriel-gonzalez-casado/docker-lamp/]
 >   cd docker-lamp
 >  ```
->
->![](./images/Clonado-repo.png)
-> 
->
->##  Copiar y configurar Archivo .env
->
+
+![](./images/Clonado-repo.png)
+ 
+
+##  Copiar y configurar Archivo .env
+>[!TIP]
 >Copiar el archivo env.dist a .env y personaliza las variables de entorno:
 >
 >   ```bash
 >   cp dist/env.dist .env
 >   ```
->Comprobamos
->
->
->
->![](./images/copy-env.png)
+
+**Comprobamos**
+
+![](./images/copy-env.png)
 
 > [!CAUTION]
 > Editar el archivo .env estableciendo los siguientes valores:
@@ -130,23 +129,21 @@ docker-lamp
 >   MYSQL_ROOT_PASSWORD=test
 >   MYSQL_PORT=3307
 > ```
-> 
->##  Copiar y configurar Archivo .htpasswd
->
->Copiar el archivo htpasswd.dist a ./apache2-php/etc/apache2/ y añade usuarios para acceder a la >intranet:
->
+
+##  Copiar y configurar Archivo .htpasswd
+
+Copiar el archivo htpasswd.dist a ./apache2-php/etc/apache2/ y añade usuarios para acceder a la intranet:
+>[!CAUTION]
 >   ```bash
 >   cp dist/htpasswd.dist ./apache2-php/etc/apache2/.htpasswd
 >   ```
->
-> ![](./images/copy.passwd.png)
->
-> 
->Comprobamos que se ha copiado adecuadamente:
->
-> 
->![](./images/c-passwd.png)
->
+
+![](./images/copy.passwd.png)
+
+> **Comprobamos que se ha copiado adecuadamente:**
+
+![](./images/c-passwd.png)
+
 
 > [!TIP]
 >Añadir un usuario con formato: 
@@ -155,25 +152,25 @@ docker-lamp
 >   ```
 >
 >La constraseña se puede generar con la utilidad de apache2-utils o directamente usando un
->[generador online](https://hellotools.org/es/generar-cifrar-contrasena-para-archivo-htpasswd)
->
-> 
->![](./images/create-user.png)
->
-> 
->## Construir las Imágenes
->
+[generador online](https://hellotools.org/es/generar-cifrar-contrasena-para-archivo-htpasswd)
+
+
+![](./images/create-user.png)
+
+
+## Construir las Imágenes
+>[!TIP]
 >Construir las imágenes usando Docker Compose:
 >
 >   ```bash
 >   docker-compose build
 >   ```
->
-> 
->![](./images/build.png)
->
-> ## Comprobaciones de Prueba
-> 
+
+
+![](./images/build.png)
+
+ ## Comprobaciones de Prueba
+> [!TIP]
 > ### Creación de un usuario adicional para acceder a la intranet:
 > Para acceder a al intranet se necesita crear un archivo .htpasswd con los nombres de usuario y > sus contraseñas. Se puede usar la herramienta htpasswd para esto. Para ello accede al >contenedor daweb-docker-lamp-apache2 a través del terminal mediante el siguiente comando:
 > 
@@ -185,24 +182,27 @@ docker-lamp
 > ```
 > htpasswd /etc/apache2/.htpasswd usuario2
 > ```
-> 
-### Prueba de los servicios:
- Para probar si los servicios están funcionando correctamente, acceder a los siguientes enlaces a través del navegador:
-- **Prueba del sitio principal**: [http://localhost](http://localhost)
-- **Prueba de la intranet**: [http://localhost:8060 (usando usuario1 y contraseña:123456789 o >  el usuario creado en el paso anterior)](http://localhost:8060)
-- **Prueba de PHP Info**: [http://localhost/phpinfo.php](http://localhost/phpinfo.php)
-- **Prueba de Conexión a la Base de Datos**: [http://localhost/test-bd.php](http://localhost/test-bd.php)
-- **Prueba de phpmyadmin**: [http://localhost:8080 (con el usuario root y la contraseña establecida)](http://localhost:8080)
 
->## Iniciar los Contenedores
->
->Arrancar los contenedores en modo detached:
+
+
+### Prueba de los servicios:
+>[!IMPORTANT]
+>Para probar si los servicios están funcionando correctamente, acceder a los siguientes enlaces a >través del navegador:
+>- **Prueba del sitio principal**: [http://localhost](http://localhost)
+>- **Prueba de la intranet**: [http://localhost:8060 (usando usuario1 y contraseña:123456789 o >  >el usuario creado en el paso anterior)](http://localhost:8060)
+>- **Prueba de PHP Info**: [http://localhost/phpinfo.php](http://localhost/phpinfo.php)
+>- **Prueba de Conexión a la Base de Datos**: [http://localhost/test-bd.php]>(http://localhost/test-bd.php)
+>- **Prueba de phpmyadmin**: [http://localhost:8080 (con el usuario root y la contraseña >establecida)](http://localhost:8080)
+
+## Iniciar los Contenedores
+>[!TIP]
+>Arrancar los contenedores en modo detached `-d`:
 >
 >   ```bash
 >   docker-compose up -d
 >   ```
-> ![](./images/up.png)
-> 
+ ![](./images/up.png)
+
 
 ## Parte 1 (VIRTUAL HOST)
 
@@ -227,7 +227,7 @@ docker-lamp
 >> >- Configurar el puerto la escucha por el puerto 8081
 >> >- Tener la misma configuración de autenticación que la intranet, pero en este caso en vez de estar dentro de <Directory> debe estar dentro de la etiqueta <location /> ya que se va a configurar un proxy inverso para redirigir.
 >> >- Después de cerrar la etiqueta </Location> se tiene que incluir la configuración del > >proxy inverso que redirija todas las peticiones al servicio de phpmyadmin desplegado. Hay > >que agregar las siguientes líneas:
->
+
 ```
 ProxyPreserveHost On
 ProxyPass / http://phpmyadmin:80/
@@ -246,7 +246,7 @@ ProxyPassReverse / http://phpmyadmin:80/
 >    # Activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf
 >    RUN a2ensite daniel-perezserrano-phpmyadmin.conf
 >   ```
->    ![](./images/dockerfile-new-php-conf.png)
+   ![](./images/dockerfile-new-php-conf.png)
 
 ## Parte 2 (CERTIFICADOS SSL)
 
@@ -260,7 +260,7 @@ Crear un directorio llamado certs en el directorio raiz del proyecto para almace
 >mkdir certs
 >cd certs
 >```
->![](./images/intranet-servername.png)
+![](./images/intranet-servername.png)
 
 Lanzar el comando de generación de certificados de openssl:
 >[!WARNING]
