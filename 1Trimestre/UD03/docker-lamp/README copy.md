@@ -151,7 +151,7 @@ Una vez generada copiamos el usuario:contrasña en el adchivo `.htpasswd`:
 
 ![](./images/adding-2-user.png)
 
->[!WARNIG]
+>[!WARNING]
 > Modificar el archivo _**Dockerfile**_ para que copie los `USUARIO:CONTRASEÑA` en el directorio del contenedor `/etc/apache2/`
 >
 > Asegurate de tner la siguiente línea en el _**Dockerfile**: 
