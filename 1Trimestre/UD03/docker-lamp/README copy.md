@@ -220,7 +220,8 @@ ProxyPassReverse / http://phpmyadmin:80/
 ```
 ![](./images/new-php-vh.png)
 
->### Habilitar los módulos de proxy inverso en el Dockerfile de la imágen de apache, estos módulos >son: proxy proxy_http. Y activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf >en el Dockerfile del fichero apache.
+>### Habilitar los módulos de proxy inverso en el Dockerfile de la imágen de apache, estos módulos son: proxy proxy_http. Y activar el módulo de configuración del nombre-apellidos-phpmyadmin.conf en el Dockerfile del fichero apache.
+
 >> [!IMPORTANT]
 >>> Para ello en el _**Dockerfile**_ añadimos las siguientes líneas:
 >
