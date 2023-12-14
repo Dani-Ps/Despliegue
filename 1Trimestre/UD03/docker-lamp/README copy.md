@@ -241,7 +241,7 @@ ProxyPassReverse / http://phpmyadmin:80/
 ![](./images/add-intranet-new-index.png)
 
 >[!IMPORTANT]
-> Modifica el `_**Dockerfile**_` para que copie los archivos al directorio `/var/www/html/intranet` del contenedor
+> Modifica el __**Dockerfile**_ para que copie los archivos al directorio `/var/www/html/intranet` del contenedor
 
 ```bash
 # Copiar el nuevo index.html para la intranet
@@ -335,7 +335,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout intranet.key -out in
 
 #### Habilitar el módulo mod_ssl
 > [!IMPORTANT]
->En el archivo  `_**Dockerfile**_` del directorio  `./apache2-php ` se deben copiar los certificados generados, para ello añade la siguiente línea:
+>En el archivo  _**Dockerfile**_ del directorio  `./apache2-php ` se deben copiar los certificados generados, para ello añade la siguiente línea:
 
 
 ```
