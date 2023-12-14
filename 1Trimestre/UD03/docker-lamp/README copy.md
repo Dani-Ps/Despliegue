@@ -177,7 +177,7 @@ COPY ./etc/apache2/.htpasswd /etc/apache2/.htpasswd
 >- **Prueba del sitio principal**: [http://localhost](http://localhost)
 >- **Prueba de la intranet**: [http://localhost:8060 (usando usuario1 y contraseña:123456789 o >  >el usuario creado en el paso anterior)](http://localhost:8060)
 >- **Prueba de PHP Info**: [http://localhost/phpinfo.php](http://localhost/phpinfo.php)
->- **Prueba de Conexión a la Base de Datos**: [http://localhost/test-bd.php]>(http://localhost/test-bd.php)
+>- **Prueba de Conexión a la Base de Datos**: [http://localhost/test-bd.php](http://localhost/test-bd.php)
 >- **Prueba de phpmyadmin**: [http://localhost:8080 (con el usuario root y la contraseña >establecida)](http://localhost:8080)
 
 ## Iniciar los Contenedores
@@ -277,6 +277,53 @@ Comprueba que todo ha funcionado correctamente ingresando en la intranet:
 ![](./images/add-intranet-user.png)
 
 ### E) En el sitio principal realiza la instalación de un CMS Wordpress.
+
+  Pasos: 
+  > 1. Descargar y extraer el directorio wordpress en la siguiente dirección: `apache2-php\www\intranet `
+    >  > [!Enlace de descarga](https://wordpress.org/download/)
+
+    ![](./images/wp-directori.png)
+
+  >> >Editamos el directorio al _**Dockerfile**_ para que lo copie en el contendor `apache2-php`:
+
+   ```bash
+  COPY ./www/intranet/wordpress /var/www/html/
+   ```
+   **O bien descargamos directamente y extraemos wordpress desde la bash del contenedor:**
+   > Con el siguiente comando:
+   ```bash
+    curl -O https://wordpress.org/latest.tar.gz
+   ```
+
+   ![](./images/DescargarWordPress.png)
+
+
+  > 2. Creamos una base de datos para el wordpress: 
+    > [!IMPORTANT]
+    > Este paso es muy importante sino no podremos comenzar con la instalación del CMS
+
+![](./images/add-wp-bd.png)
+
+  
+  > 3. Comenzamos la instalación: 
+
+  > [!TIP]
+    > En el directorio de **wordpress** esta el archivo **`readme.html`**, en el cual se detallan los pasos de la instalación.
+  >> En el navegador en nuestro local (www.local) abrimos el siguiente archivo que está en el directorio de wordpress: `wp-admin/install.php`
+  ```bash
+   # Quedaria así la url: 
+   www.local/wp-admin/install.php
+   ```
+
+
+
+![](./images/1-step-cms.png)
+![](./images/2-step-cms.png)
+![](./images/add-wp-bd-byps.png)
+![](./images/add-wp-bd-user.png)
+
+
+![](./images/login-data-wp.png)
 
 
 
