@@ -1,0 +1,4 @@
+FROM tomcat:10.1.18
+
+EXPOSE 8080
+
