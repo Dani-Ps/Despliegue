@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://daweb-nombre-apellidos-fullstack.us-east-1.elasticbeanstalk.com/api'
+    apiUrl: 'http://daweb-daniel-perezserrano-fullstack2.us-east-1.elasticbeanstalk.com/api'
 };
