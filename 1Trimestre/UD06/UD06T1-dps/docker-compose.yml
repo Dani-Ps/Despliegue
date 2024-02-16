@@ -1,0 +1,13 @@
+version: '2'
+services:
+  ldap:
+    image: osixia/openldap:1.5.0  # Corregido el nombre de la imagen
+    container_name: ldap  # Corregido el nombre del contenedor
+    environment:
+      - LDAP_ORGANISATION=iesalixar
+      - LDAP_DOMAIN=iesalixar.org
+      - LDAP_BASE_DN=dc=iesalixar,dc=org  # Eliminado el par de comillas extra
+      - LDAP_ADMIN_PASSWORD=passiesalixar
+    ports:
+      - "389:389"  # Corregido el formato de los puertos
+      - "636:636"   # Corregido el formato de los puertos
