@@ -1,0 +1,11 @@
+# fichero user.ldif
+dn: uid=bassa,dc=iesalixar,dc=org
+uid: bassa
+cn: bassa
+sn: bassa-surname
+# top es el objeto padre genérico de LDAP
+objectClass: top
+# inetOrgPerson es una clase genérica de LDAP para la definición de objetos de personas de una organización
+objectClass: inetOrgPerson
+userPassword: prueba
+mail: bassa@iesalixar.org

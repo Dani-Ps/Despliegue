@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  proftpd:
+    container_name: daniel-perezserrano-proftpd_server
+    build: ./proftpd
+    ports:
+      - "21:21"
+      - "20:20"
+      - "6000-6100:6000-6100"
+    volumes:
+      - ./data:/data
+      - ./proftpd/etc/proftpd/proftpd.conf:/etc/proftpd/proftpd.conf
+    restart: unless-stopped
